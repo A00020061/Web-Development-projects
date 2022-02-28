@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/comment.css">
+    <title>comment section</title>
+    <style>
+        #scorecard {
+            background-color: blue;
+            display: inline-block;
+            padding: 10rem;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        #btn {
+            padding: 1rem;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .printline{
+            border: 2px solid black;
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+        .btnbtn{
+            padding: 1rem;
+            font-size: 1rem;
+            box-sizing: border-box;
+            letter-spacing: 1.5px;
+            display: block;
+            margin: 0 auto;
+            background-color: blueviolet;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="scorecard">
+            <h1>hahahaha</h1>
+        </div>
+        <button id="btn" onclick="helloScore()">Hide Me</button>
+        <main>
+            <input type="text" id="search_bar" placeholder="Search here" onkeyup="searchCafe()">
+            <ul id="search_list">
+                <li class='what'>India</li>
+                <li class='what'>Australia</li>
+                <li class='what'>Pakistan</li>
+                <li class='what'>Sri Lanka</li>
+                <li class='what'>Nepal</li>
+                <li class='what'>Bangldesh</li>
+                <li class='what'>China</li>
+                <li class='what'>South Korea</li>
+                <li class='what'>North Korea</li>
+                <li class='what'>The United State Of America</li>
+            </ul>
+        </main>
+        <br>
+        <br>
+        <p id="demo" onclick="document.getElementById('demo').innerHTML = new Date().toLocaleTimeString()">check</p>
+    </div>
+    <div id="printline">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tenetur animi minus tempora est, dolore hic
+            aliquam quod? Aliquam quisquam, numquam distinctio nesciunt molestias consequuntur suscipit esse ipsam totam
+            ipsum accusamus magni animi perferendis cupiditate dolor blanditiis voluptate quibusdam, voluptatum quo.
+            Laudantium earum dicta accusamus est, ipsam maxime minus, deleniti porro, eaque animi qui ullam voluptatem?
+            Voluptas corporis, minus et commodi iure nihil quam molestias inventore officia consequuntur consectetur
+            autem nemo ea molestiae quibusdam omnis aliquid soluta nisi sequi delectus. Sequi facilis eaque ipsum
+            doloribus aperiam modi ipsam nostrum cupiditate, sed est veritatis deleniti voluptas expedita iste ab
+            obcaecati minus!</p>
+    </div>
+    <button class="btnbtn" onclick="printME('printline')">Printer</button>
+    <script>
+        
+    //     function searchCafe() {
+    //         let input = document.getElementById('search_bar').value.toUpperCase();
+    //         let check = document.getElementById('what');
+    //         for (i = 0; i < check.length; i++) {
+    //             if (!check[i].innerHTML.toUpperCase().includes(input)) {
+    //                 check[i].style.display = 'none';
+    //             } else {
+    //                 check[i].style.display = '';
+    //             }
+    //         }
+    //         function mytime() {
+
+    //             var currenttime = new Date();
+    //             // var whattime = currenttime.toLocaleTimeString();
+    //             document.getElementById('demo').innerHTML = currenttimes;
+    //         }
+    //         setInterval(mytime, 1000)
+
+
+    //         function helloScore() {
+    //             let actualdisplay = document.getElementById('scorecard');
+    //             let realhd = actualdisplay.style.display;
+    //             let buttoncheck = document.getElementById('btn');
+    //             if (realhd == 'block') {
+    //                 actualdisplay.style.display = '';
+    //                 buttoncheck.innerHTML = 'Show me';
+    //             } else {
+    //                 actualdisplay.style.display = 'block';
+    //                 buttoncheck.innerHTML = 'Hide Me';
+    //             }
+    //         }
+    // </script>
+
+    <!-- <script>
+        
+    //     var images = ['motta.jpg', 
+    //                   'mottamss.jpg', 
+    //                   'mottu1.jpg', 
+    //                   'Nikhil.jpg', 
+    //                   'nikmss.jpg', 
+    //                   'Shubham.jpg'];
+    //     var i = 0;
+    //     function showOf(){
+
+    //         document.getElementById('mehere').src = images[i];
+    //         if(i<(images.length-1))
+    //             i++;
+    //         else
+    //             i = 0;
+    //     }
+        
+    //     setInterval(showOf,2000)
+
+    //     function lookMe(){
+    //         var whatyouhide = document.getElementById('gaphona');
+    //         var displaySetting = whatyouhide.style.display;
+    //         var btn = document.getElementById('notshow');
+    //         if(displaySetting == 'block'){
+    //             whatyouhide.style.display = '';
+    //             btn.innerHTML = 'Show Me';
+
+    //         }else{
+    //             whatyouhide.style.display = 'block';
+    //             btn.innerHTML = 'Hide Me'
+    //         }
+    //     }
+    // </script> -->
+</body>
+
+</html>

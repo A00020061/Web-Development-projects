@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>All javascript functions</title>
+    <style>
+        body {
+            background-color: #0a3d62;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            /* s */
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 6rem;
+            font-family: 'Lobster', cursive;
+            text-shadow: 5px 0  white;
+            letter-spacing: 10px;
+            color: #f6b93b;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Lobster', cursive;
+            text-shadow: 2px 0px white;
+            color: #00b894;
+        }
+
+        .one {
+            display: inline-block;
+            margin-right: 3rem;
+        }
+
+        .btn {
+            width: 80%;
+            /* border: 2px solid white; */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 10px;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="winner">JS LUDO!</h1>
+        <div class="one">
+            <h2>Player1</h2>
+            <img src="dice6.jpg" alt="" id="check1">
+        </div>
+        <div class="one">
+            <h2>Player2</h2>
+            <img src="dice2.jpg" alt="" id="check2">
+        </div>
+    </div>
+    <div class="btn">
+        <button id="btnbtn" onclick="gameOn()">Click Me</button>
+    </div>
+    <script>
+        function gameOn() {
+
+            const mathrule = Math.floor((Math.random()) * 6) + 1;
+            const imagesrule1 = 'dice' + mathrule + '.jpg';
+            document.getElementById('check1').setAttribute('src', imagesrule1)
+
+            const mathrule1 = Math.floor(Math.random() * 6) + 1;
+            const imagesrule2 = 'dice' + mathrule1 + '.jpg';
+            document.getElementById('check2').setAttribute('src', imagesrule2)
+            if(mathrule>mathrule1){
+                document.getElementById('winner').innerHTML = 'Mottu Won :)';
+            }else if(mathrule<mathrule1){
+                document.getElementById('winner').innerHTML = 'Nik Won :)';
+            }else{
+                document.getElementById('winner').innerHTML = 'Game Draw';
+            }
+        }
+    </script>
+</body>
+
+</html>

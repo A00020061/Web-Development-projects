@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fake music app</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* border: 1px solid black; */
+            height: 300px;
+        }
+
+        .main_container {
+            /* border: 1px solid black; */
+            width: 60%;
+
+            margin: 5rem auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+        }
+
+        section {
+            /* border: 1px solid blue; */
+            position: relative;
+
+
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+
+
+        }
+
+        #ganna {
+            position: relative;
+        }
+
+        #btn {
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            color: blue;
+            font-size: 2rem;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <audio src="../music/song1.mp3" id="songtime"></audio>
+        <div class="main_container">
+            <section id="songlength">
+                <a >
+                    <i id="btn" class="fa fa-play"></i>
+                    <img src="https://images.unsplash.com/photo-1645318800862-0d343ebd4e6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                        <!-- <audio id="songclick" src="../music/song3.mp3"></audio> -->
+                        
+                </a>
+            </section>
+            <section id="songlength">
+                <a>
+                    <img onclick="playSong('punjabi')" ondblclick="pauseSong('punjabi')" src="https://images.unsplash.com/photo-1645265135962-0d1355a868f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                        <audio src="../music/song3.mp3" id="punjabi"></audio>
+                        <i id="btn" class="fa fa-play"></i>
+                </a>
+            </section>
+        </div>
+    </div>
+    <script>
+        let playbtn = document.getElementById('btn');
+        // let music = document.querySelector('audio');
+        let isPlaying= false;
+        playbtn.addEventListener('click',() =>{
+            if(isplaying){
+                pauseSong();
+            }else{
+                playSong();
+            }
+        });
+        function playSong(audioId){
+            isPlaying = true;
+            let audio = document.getElementById(audioId);
+            audio.play();
+            playbtn.classList.replace('fa-play', 'fa-pause');
+        }
+        function pauseSong(audioId){
+            isplaying = false;
+            let audio = document.getElementById(audioId);
+            audio.pause();
+            playbtn.classList.replace('fa-pause','fa-play');
+        }
+        // playbtn.addEventListener('click',()=>{
+        //     if(isPlaying){
+        //         pauseMusic();
+               
+        //     }else{
+        //         playMusic();
+              
+        //     }
+        // });
+        // const pauseMusic = () =>{
+        //     isPlaying = false;
+        //     music.pause();
+        //     playbtn.classList.replace('fa-pause','fa-play');
+        // };
+        // const playMusic = () =>{
+        //     isPlaying = true;
+        //     music.play();
+        //     playbtn.classList.replace('fa-pause','fa-play');
+        // };
+
+
+
+    </script>
+</body>
+
+</html>

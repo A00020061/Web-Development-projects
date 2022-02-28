@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>music file</title>
+    <style>
+        .conatiner {
+            /* border: 1px solid black; */
+            display: flex;
+            gap: 4rem;
+            font-size: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <nav>
+            <h1>NO MUSIC NO LOVE :)(:</h1>
+            
+            <audio src="../music/song4.mp3" id="songtime">Love Song</audio>
+
+        </nav>
+        <div class="btn">
+            <button id="btn1" onclick="mixTime()">Play Me</button>
+            <!-- <button id="btn2"  onclick="pauseTime()">Pause Me</button> -->
+    <!-- </div>
+    </div> -->
+    <button id="btnbtn" type="button" onclick="playAudio()">Play me</button>
+    <button onclick="pauseAudio()" type="button">Pause me</button>
+    <audio src="../music/song2.mp3" id="sidhusong">Sidhu moose wala</audio>
+    <div class="conatiner">
+        <i class="fa fa-backward" id="pre" title="previous"></i>
+        <i class="fa fa-play" id="play" title="play"></i>
+        <i class="fa fa-forward" id="forward" title="forward"></i>
+    </div>
+
+    <script>
+        const playbtn = document.getElementById('play');
+        const music = document.querySelector('audio');
+        let isplaying = false;
+        const prebtn = document.getElementById('pre');
+        const forwardbtn = document.getElementById('forward');
+        songIndex = 0;
+        const song = [{ name: 'song1' }, {
+            name: 'song2'
+        }, {
+            name: 'song3'
+        }, {
+            name: 'song4'
+        }]
+        const playMusic = () => {
+            isplaying = true;
+            music.play();
+            playbtn.classList.replace('fa-play', 'fa-pause');
+        };
+        const pauseMusic = () => {
+            isplaying = false;
+            music.pause();
+            playbtn.classList.replace('fa-pause', 'fa-play');
+        };
+        playbtn.addEventListener('click', () => {
+            if (isplaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        });
+        const songload = (song) => {
+            music.src = '../music/' + song.name + '.mp3';
+
+        }
+        const nextsong = () =>{
+            songIndex = (songIndex + 1)% song.length;
+            songload(song[songIndex])
+            playMusic();
+        }
+        const presong = () =>{
+            songIndex = (songIndex -1 + song.length) % song.length;
+            songload(song[songIndex])
+            playMusic();
+        }
+        forwardbtn.addEventListener('click',nextsong);
+        prebtn.addEventListener('click', presong);
+
+        // songload(song[3]);
+
+
+
+
+
+
+
+
+
+        // let audiofile = document.createElement('audio');
+        // let btnbtn = document.getElementById('btn1');
+
+        // function mixTime() {
+        //     let a = document.getElementById('songtime');
+        //     if (a.paused) {
+        //         a.play();
+        //         btnbtn.innerHTML = 'pause';
+        //     } else if{
+        //         a.pause();
+        //         btnbtn.innerHTML = 'play';
+        //     }
+
+        // }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

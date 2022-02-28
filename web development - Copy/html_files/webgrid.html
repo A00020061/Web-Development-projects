@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid</title>
+    <style>
+        /* * {
+            /* margin: 0;
+            padding: 0; */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: wheat;
+        }
+
+        div.container,
+        div.main,
+        article {
+            border: 1px solid black;
+        }
+
+        .main {
+            display: grid;
+            width: min(95%, 70rem);
+            margin-inline: auto;
+            padding-block: 2rem;
+            gap: 1.5rem;
+            /* grid-template-columns: repeat(4, 1fr); */
+            text-align: center;
+            grid-template-areas: 
+            'one'
+            'two'
+            'three'
+            'four'
+            'five';
+
+            /* grid-template-columns: auto auto auto;
+            grid-template-rows: 10rem 15rem;
+            grid-gap: 1rem;
+            text-align: center; */
+           
+        }
+        @media (min-width: 50em) {
+            .main{
+                grid-template-areas: 
+                'one one two five'
+                'three four four five';
+            }
+            
+        }
+        /* .main>*{
+            min-height: 15rem;
+        } */
+        
+
+        .one {
+            background-color: green;
+            grid-area: one;
+            
+            /* grid-column: span 2;
+            border-radius: 5px 10px; */
+        }
+
+        .two {
+            background-color: yellow;
+            grid-area: two;
+            
+        }
+
+        .three {
+            background-color: blue;
+            grid-area: three;
+            
+            /* grid-column-start: 4;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+        }
+
+        .four {
+            background-color: white;
+            grid-area: four;
+            
+        }
+
+        .five {
+            background-color: wheat;
+            grid-area: five;
+            
+            /* grid-column: span 2; */
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <article class="testimonial one">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel aut esse
+                numquam
+                hic odit molestias dicta vero eius cumque nobis. Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Ratione, eos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque similique enim,
+                debitis quaerat velit in eius culpa earum quas voluptatum explicabo beatae magnam numquam distinctio
+                sapiente eos at nostrum fugit, rem nesciunt ipsa accusantium, aperiam eligendi. Quaerat minus aliquid,
+                eum perspiciatis ducimus necessitatibus, rerum dolorum veniam pariatur quos voluptatibus magnam?
+            </article>
+            <article class="testimonial two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat
+                dignissimos consequatur eveniet doloribus odio eum hic quos eos? Et enim totam a id sapiente? Lorem
+                ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis ad nulla quo
+                omnis cumque ducimus, ex porro neque similique sapiente possimus ratione cupiditate sequi eveniet
+                dolores, cum itaque iusto eos repellat. Error nostrum fugit dolorum pariatur perferendis molestiae nobis
+                odit deserunt, ea, porro repellat temporibus expedita quasi. Nostrum consequuntur nihil accusamus ipsam
+                atque quasi possimus, fuga, officia veniam dolorem maiores?</article>
+            <article class="testimonial three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio fugiat
+                sed
+                quis voluptatem ex laborum a ratione saepe! Nesciunt sunt dolorem qui neque nihil consectetur numquam,
+                accusamus cupiditate culpa minus mollitia corporis aut quod molestias possimus, alias reiciendis
+                inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui expedita consequatur quaerat
+                quam nobis architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam blanditiis
+                neque fugiat! Consectetur rerum, repellendus dolorum aspernatur voluptatum dignissimos illo
+                libero necessitatibus ad reprehenderit praesentium nihil quis placeat adipisci, laudantium expedita
+                suscipit quo molestias quos doloribus. Alias sint numquam accusantium id. Veniam, temporibus? </article>
+            <article class="testimonial four">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, iusto
+                laboriosam sed aliquam reprehenderit ullam nisi delectus tempora rem animi tempore? Necessitatibus
+                consectetur iure architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, adipisci?
+            </article>
+            <article class="testimonial five">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam enim culpa
+                veritatis sit aspernatur omnis et recusandae vero quam iure, repudiandae tempore libero fugiat porro
+                harum possimus odio expedita, laboriosam ex excepturi aperiam ipsum ea similique. Animi quod vitae,
+                sapiente illum sunt, delectus adipisci natus est blanditiis quisquam voluptatum aut! Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Blanditiis quibusdam minima numquam quam optio dolores quo, qui
+                saepe odit cum.
+
+
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

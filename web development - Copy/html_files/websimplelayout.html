@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            position: relative;
+        }
+
+        .container {
+            /* border: 1px solid black; */
+            /* margin: 1rem 4rem; */
+            background-color: #38cfd9;
+            width: 90%;
+            margin: 2rem auto;
+            overflow: hidden;
+            /* height: 90vh; */
+            background: linear-gradient(to left, red, pink, blue);
+        }
+
+        .main {
+            /* border: 1px solid blue; */
+            margin: 2rem auto;
+            background-color: #23424a;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px 5px cyan;
+            /* height: 80vh; */
+        }
+
+        .intro {
+            padding: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+        }
+
+        p {
+            color: #42a5ac;
+            font-size: 1.5rem;
+        }
+
+        button {
+            background-color: #38cfd9;
+            padding: .7rem 1rem;
+            border: none;
+            border-radius: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 2px cyan;
+
+
+        }
+
+        button:hover {
+            background-color: powderblue;
+            color: royalblue;
+
+        }
+
+        @media screen and (max-width: 750px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            button {
+                padding: .6rem .8rem;
+                letter-spacing: .50px;
+            }
+        }
+
+        .search {
+            /* border: 1px solid red; */
+            color: white;
+            /* padding-left: 1px; */
+            /* position: relative; */
+            /* z-index: -1; */
+            /* float: left; */
+            display: inline-block;
+        }
+
+        input {
+            border: none;
+            padding: .3rem;
+            letter-spacing: 1px;
+            box-shadow: 1px 1px 2px 2px blue;
+
+        }
+
+        .complete li {
+            list-style: none;
+            padding: 4px 0px;
+            border: 1px solid white;
+            max-width: 10.7rem;
+            margin-left: -2.5rem;
+            position: relative;
+            top: -16px;
+            background: linear-gradient(to right, rgba(255, 255, 0, 0.541), green, blue);
+
+        }
+
+        .complete li a {
+            text-decoration: none;
+            color: white;
+            letter-spacing: .5px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            font-size: 1.7rem;
+            color: wheat;
+        }
+
+        .imagecard {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            float: right;
+            grid-gap: 10px;
+        }
+
+        img {
+            width: 11rem;
+            object-fit: cover;
+            /* float: left; */
+            height: 10rem;
+        }
+
+        .container1 {
+            border: 1px solid black;
+            width: 90%;
+            margin: 0 auto;
+            /* display: inline-block; */
+            height: 80vh;
+            background: linear-gradient(to left, red, pink, blue);
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="intro">
+                <h1>Responsive layouts don't have to be a struggle</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur inventore expedita, nemo magnam
+                    atque minima non deserunt hic odio, debitis accusantium, in aut mollitia sed eum facilis a? Sit,
+                    dicta!</p>
+                <button>I WANT TO LEARN</button>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="search"></div>
+            <h2>Find Movies</h2>
+            <input type="text" id="click" onkeyup="findMovies" placeholder="Search Movies">
+            <ul id="scoreGate" class="complete list">
+                <li><a href="#">Spider Man</a></li>
+                <li><a href="#">Don</a></li>
+                <li><a href="#">Shape of Water</a></li>
+                <li><a href="#">Lion</a></li>
+                <li><a href="#">Prison Break</a></li>
+                <li><a href="#">Black Day</a></li>
+                <li><a href="#">Love Life</a></li>
+                <li><a href="#">Mysterious</a></li>
+                <li><a href="#">Prison 11</a></li>
+            </ul>
+        </div>
+        <div class="imagecard">
+    
+            <img src="https://images.unsplash.com/photo-1613679074971-91fc27180061?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60s"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1511165403689-1e53da0499fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1623375428145-4d276c83ce5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1557759677-209e5b9103c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1520878682198-bdde6f442adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1512113569142-8a60fccc7caa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1518134346374-184f9d21cea2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://images.unsplash.com/photo-1573283609837-b45c3fb21f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <img src="https://media.istockphoto.com/photos/photo-of-a-car-stopped-on-the-road-lighting-up-a-zombies-silhouette-picture-id1282112376?b=1&k=20&m=1282112376&s=170667a&w=0&h=enrsdYyxUHNqBJlkO7RnrurfvjkXfh7hj9CBX1Ky720="
+                alt="">
+        </div>
+    </div>
+
+
+
+    
+    <script>
+        function findMovies() {
+            let filter = document.getElementById('click').value.toUpperCase();
+            let ul = document.getElementById('scoreGate');
+            let li = ul.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                let a = li[i].getElementsByTagName('a')[0];
+                let textValue = a.textContent;
+                if (textValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

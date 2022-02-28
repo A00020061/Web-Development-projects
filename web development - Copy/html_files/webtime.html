@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Time Zone</title>
+    <style>
+        img{
+            width: 80%;
+            /* border: 1px solid black; */
+            border-radius: 10px 100px;
+           
+
+            
+            /* margin-left: 3.5rem; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 40%;
+            border: 2px solid black;
+            margin: 2rem auto;
+            text-align: center;
+            background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 100px 30px;
+            object-fit: cover;
+           
+
+        }
+        #text_image{
+            /* border: 1px solid blue; */
+            color: wheat;
+            font-family: 'Lobster', cursive;
+            width: 80%;   
+            margin: 1rem auto;
+            letter-spacing: 1px;
+        }
+        @media screen and (max-width: 720px){
+            #text_image{
+                font-size: 1.3rem;
+            }
+            #paragraph{
+                font-size: 1.3rem;
+            }
+            
+        }
+        p{
+            font-size: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px blue;
+        }
+        #btn{
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px 10px;
+            background-color: #232323bd;
+            color: white;
+            font-family: 'Lobster', cursive;
+            cursor: pointer;
+            /* display: inline-block; */
+        }
+        .space{
+           
+            margin: 0 auto;
+            width: 10%;
+            /* display: inline-block; */
+            
+        }
+        #btn1{
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px 50px;
+            background-color: #232323bd;
+            color: white;
+            font-family: 'Lobster', cursive;
+            cursor: pointer;
+            /* display: inline-block; */
+        }
+        aside{
+            /* border: 1px solid black; */
+            display: inline-block;
+            float: right;
+            background-image: url(https://cdn.pixabay.com/photo/2018/03/13/11/26/clock-3222267__340.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            color: black;
+            /* background-size: cover; */
+            object-fit: cover;
+            border-radius: 50px 10px;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        aside p{
+            color: black;
+        }
+        .navbar{
+            /* border: 1px solid black; */
+            background-color: #232323bd;
+            display: flex;
+            /* padding: .001em 0; */
+
+        }
+        .searchunorderlist{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid yellow; */
+           
+        }
+        #boom  + #boom{
+            margin-left: 2.5rem;
+            
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            /* border: 1px solid blue; */
+            /* padding: .9rem 2rem; */
+        }
+        .pushing-right{
+            /* border: 1px solid yellowgreen; */
+            display: flex;
+            list-style: none;
+            margin-right: 1rem;
+            
+        }
+        .navbarin{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid blue; */
+            flex-grow: 1;
+            text-align: center;
+        }
+        .logobar{
+            /* border: 1px solid black; */
+            margin-left: 4rem;
+           
+        }
+        .logobar img{
+            width: 80%;
+            object-fit: cover;
+        }
+        .primary--list{
+            border: 1px solid yellowgreen;
+            margin: 0 auto;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="navbar">
+            <a href="#" class="logobar"><img src="image-amyrobson.png" alt=""></a>
+            <nav class="navbarin">
+                <ul class="searchunorderlist primary--list">
+                    <li id="boom"><a href="#">Home</a></li>
+                    <li id="boom"><a href="#">Service</a></li>
+                    <li id="boom"><a href="#">Contact</a></li>
+                </ul>
+                <ul class="pushing-right">
+                    <li id="boom"><a href="#">Sign in</a></li>
+                    <li id="boom"><a href="#">Sign Out</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+    <button id="btn1" onclick="printer()">Print Me</button>
+    <aside>
+        <p id="demo"></p>
+    </aside>
+   <div class="container" id="hidemeagain">
+       <section class="sectionheader">
+           <h1 id="text_image">This is the episode for those who are going to give me money.</h1>
+           <img src="https://images.unsplash.com/photo-1551431009-a802eeec77b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGljZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" id="diceimage">
+           <p id="paragraph">Dice is very popular game in the world</p>
+       </section>
+    </div>
+    <div class="space">
+
+        <button id="btn" onclick="myFunction()">Hide Me</button>
+    </div>
+    
+    <script>
+        function myFunction(){
+            var mydisplay = document.getElementById('hidemeagain');
+            var displaysetting = mydisplay.style.display;
+            var btnbtn = document.getElementById('btn');
+            if(displaysetting == 'block'){
+                mydisplay.style.display = 'none';
+                btnbtn.innerHTML = 'Show Me';
+            }else{
+                mydisplay.style.display = 'block';
+                btnbtn.innerHTML = 'Hide Me';
+            }
+        }
+        function printer(){
+            var backup = document.body.innerHTML;
+            var pagep = document.getElementById('hidemeagain');
+            document.body.button = pagep;
+            window.print();
+            document.body.innerHTML = backup;
+
+        }
+        function updatetime(){
+            var timezone = new Date();
+            var mytime = timezone.toLocaleTimeString();
+            document.getElementById('demo').innerHTML = mytime;
+
+        }
+        setInterval(updatetime,1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function myclocktime(){
+
+        //   var clocktime = new Date();
+        //   var thapa = clocktime.toLocaleTimeString();
+        //   document.getElementById('demo').innerHTML= thapa;
+
+        // }
+        // setInterval(myclocktime,1000)
+
+        // document.getElementById('demo').innerHTML
+
+
+        // function timeUp(){
+        //     var newTime = new Date();
+        //     var mhour = newTime.getUTCHours();
+        //     var mminutes = newTime.getMinutes();
+        //     var msecond = newTime.getUTCSeconds();
+        //     var mmillionsecond = newTime.getUTCMilliseconds();
+        //     var n = newTime.getTime();
+        //     // document.write(mhour +'/'+ mminutes +'/'+ msecond +'/'+ mmillionsecond);
+        //     document.write(n);
+            
+        // }
+        // var clock = setInterval(timing,1000);
+        // function timing(){
+
+        //     var atime = new Date();
+        //     var thapa = atime.toLocaleTimeString();
+        //     // document.write(thapa);
+        //     document.getElementById('demo').innerHTML = thapa;
+        // }
+    </script>
+</body>
+</html>

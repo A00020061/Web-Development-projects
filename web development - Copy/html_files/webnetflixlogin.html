@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign In page</title>
+    <style>
+        body{
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;   
+        }
+        .container{
+            background-color: #161616;
+            display: inline-block;
+            height: 40em;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+        }
+        section{
+            padding: 2.5rem;
+            color: wheat;
+            
+        }
+        h1{
+            font-size: 2.0rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-bottom: 1.5em;
+            padding: .5em .2em;
+            border-radius: 5px;  
+            font-size: 1.3em;         
+        }
+        button{
+            padding: .5em .2em;
+            width: 100%;
+            font-size: 1.3em;
+            border-radius: 5px;
+            margin-bottom: 1.2em;
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            
+        }
+        button:hover{
+            color: white;
+
+        }
+        div.bottom p{ 
+            float: right;
+            margin-top: -.5em;
+        }
+        
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <section class="signin">
+            <form action="">
+                <div>
+                    <h1>Sign In</h1>
+                </div>
+                <div>
+                    <input type="text" name="email" id="email" size="50" placeholder="Email or phone number">
+                </div>
+                <div>
+                    <input type="password" name="password" size="50" id="password" placeholder="Password">
+                </div>
+                <div>
+                    <a href="../web development/webnetflixhomepage.html"><button>Sign In</button></a>
+                </div>
+                <div class="bottom">
+                    <input type="checkbox" name="checkbox" id="checkbox"><label for="remember">Remember me</label>
+                    <p>Need help?</p>
+                </div>
+                <div class="face">
+                    <p>Login with facebook</p>
+                    <p class="or">Or</p>
+                    <p class="google">Login with Google</p>
+
+                </div>
+
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

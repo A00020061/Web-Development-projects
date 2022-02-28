@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 2rem;
+        }
+
+
+        .main {
+            /* border: 1px solid black; */
+            /* background: linear-gradient(to left, red, blue, green); */
+            display: inline-grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-gap: 10px;
+            color: #646464;
+
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 2rem 0;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px blueviolet;
+            text-align: center;
+        }
+
+        .s {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-image: url(https://images.unsplash.com/photo-1591871937573-74dbba515c4c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            letter-spacing: 1.5px;
+        }
+
+        .k {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-image: url(data:image/jpeg;base64,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);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            letter-spacing: 1.5px;
+        }
+
+        .a {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgskSVc1SqNFBTHfliNpdQc7q9SIQMzcKX3w&usqp=CAU);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            letter-spacing: 1.5px;
+        }
+
+        .j {
+            /* grid-column-start: 2;
+            grid-column-end: 4; */
+            grid-column: 2/3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ10gyTkVZj5wZz5DW80DIUfkzsM-4sDtWJyCtFvKW4lDHkWD4wyH5y2ITOCdDVGyrmODs&usqp=CAU);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            letter-spacing: 1.5px;
+
+        }
+
+        .p {
+            background-image: url(https://www.pngkit.com/png/detail/62-628027_jerry-jerry-mouse.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+
+        }
+
+        .l {
+            background-image: url(https://images.unsplash.com/photo-1593376853899-fbb47a057fa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHJvYm90fGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            letter-spacing: 1.5px;
+        }
+
+        .c {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-end: 4;
+            grid-row-start: 3;
+            background-image: url(https://i.pinimg.com/474x/71/37/d3/7137d3351ab553344cec7280dd2359f2--bffs-bestfriends.jpg);
+            background-position: center;
+            background-size: cover;
+            color: black;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+
+        }
+
+        @media screen and (max-width: 620px) {
+            .main {
+                grid-template-columns: 75px 75px 75px;
+                grid-gap: 7.5px;
+            }
+
+            .box {
+                padding: 1.5rem 0;
+                text-align: center;
+            }
+
+        }
+
+        .main1 {
+            /* border: 1px solid black; */
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas:
+                'header header header header header'
+                'left middle middle middle right'
+                'footer footer footer footer footer';
+            margin-top: 1rem;
+        }
+
+
+        .header {
+            grid-area: header;
+            padding: 15px;
+        }
+
+        .left {
+            grid-area: left;
+            padding: 15px;
+
+
+        }
+
+        .right {
+            grid-area: right;
+            padding: 15px;
+        }
+
+        .middle {
+            grid-area: middle;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-areas:
+                'score1 score1'
+                'score2 score3';
+        }
+
+        .score1 {
+            grid-area: score1;
+            border: 1px solid black;
+        }
+
+        .score2 {
+            grid-area: score2;
+            border: 1px solid black;
+        }
+
+        .score3 {
+            grid-area: score3;
+            border: 1px solid black;
+        }
+
+        .footer {
+            grid-area: footer;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 720px) {
+            .main1 {
+                grid-template-columns: 150px auto auto;
+                grid-template-areas:
+                    'header header header'
+                    'left middle middle'
+                    'right right right'
+                    'footer footer footer';
+            }
+
+
+        }
+
+        .main2 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .box1:nth-child(even) {
+            background: linear-gradient(to left, red, blue, green);
+            color: white;
+
+        }
+
+        .box1:nth-child(odd) {
+            background: linear-gradient(to right, pink, yellow, blue);
+        }
+
+        .box1 {
+            border: 1px solid black;
+            padding: 2rem 0;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px blueviolet;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="box s">Sandy</div>
+            <div class="box a">Andy</div>
+            <div class="box k">Kandy</div>
+            <div class="box p">Pandy</div>
+            <div class="box l">Landy</div>
+            <div class="box j">Jandy</div>
+            <div class="box c">Best Friends</div>
+        </div>
+        <div class="main2">
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+            <div class="box1">4</div>
+            <div class="box1">5</div>
+            <div class="box1">6</div>
+            <div class="box1">7</div>
+            <div class="box1">8</div>
+            <div class="box1">9</div>
+            <div class="box1">10</div>
+        </div>
+        <div class="main1">
+            <div class="box header">Header Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit illo error
+                mollitia aut reiciendis blanditiis aliquam dolore a dicta est totam explicabo dolorum repudiandae
+                consequuntur saepe pariatur deleniti officia obcaecati, autem necessitatibus harum. Corrupti error sunt
+                reiciendis blanditiis ipsa, natus aliquid, mollitia rerum magnam atque minus praesentium nulla! Nostrum
+                fuga voluptatibus debitis. Perferendis suscipit, dolore quis tenetur dolorum at itaque est. Inventore,
+                consequatur quo. Ratione distinctio beatae amet alias, sit consequatur, eius dolore, repellat aliquam
+                voluptatibus ullam assumenda dolorum quos dicta molestias ut ipsum veniam sint! At ullam, excepturi
+                totam unde nulla incidunt provident itaque ea perferendis? Cum, ipsum sed?</div>
+            <div class="box left ">Left aside Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos qui illo
+                facilis illum explicabo, esse, pariatur unde itaque ut ullam dolore natus? Aliquid provident unde qui
+                obcaecati est dolore id doloremque cupiditate dolores odit, illo fugit quam odio corrupti vel suscipit
+                repellat quidem numquam iure! Numquam maiores dolore ea error.</div>
+            <div class="box middle">
+                <div class="score1">Score 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod quos
+                    sit nihil, dolorum, provident sint ipsum asperiores placeat pariatur fugiat magnam nisi aliquam!
+                    Debitis ipsa et esse tempora doloremque, molestias ab qui perspiciatis at in ut, nisi dolore
+                    architecto.</div>
+                <div class="score2">Score 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id repellendus
+                    optio, ab ad minima iusto pariatur molestiae facilis libero non nostrum aperiam aspernatur, ratione
+                    voluptatibus, praesentium voluptatum tempore sunt. Cumque temporibus assumenda quis dicta dolorum
+                    incidunt suscipit sunt, vero quae?</div>
+                <div class="score3">Score 3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia impedit
+                    quibusdam magni cumque distinctio, explicabo libero nesciunt iure nobis odit dolorem voluptate. Modi
+                    dolor voluptatem nulla exercitationem architecto obcaecati quibusdam nesciunt dignissimos?
+                    Voluptatibus, dignissimos quae eveniet nam sed excepturi eaque.</div>
+
+            </div>
+            <div class="box right ">Right aside Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+                voluptatibus at cum sit, aut blanditiis omnis quidem! Assumenda dolores eius nostrum veritatis
+                consequatur, eligendi quae distinctio incidunt at nam quibusdam sint aliquam. Quam quasi saepe
+                accusantium vel nostrum illo dolor adipisci velit ea a eaque ipsam, qui autem? Veniam, temporibus!</div>
+            <div class="box footer">Footer Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+                doloremque ut nostrum voluptatibus eligendi impedit, quo rem delectus minus, nulla sit maxime,
+                voluptatum maiores laborum omnis repellat tempore ipsa quia at dignissimos labore! Praesentium aperiam,
+                et in non quaerat beatae! Totam, quibusdam provident illo doloremque quis animi esse inventore beatae!
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

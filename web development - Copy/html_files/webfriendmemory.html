@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Oxford Street</title>
+    <style>
+        body {
+            margin: 1rem;
+            background: linear-gradient(to left, red, blue, green);
+            position: relative;
+        }
+
+        .main {
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(3, 250px);
+            grid-template-rows: repeat(2, 250px);
+            grid-gap: 1rem;
+            width: 80vh;
+            margin: 5rem auto;
+
+
+
+        }
+
+        .container {
+            display: block;
+            /* border: 1px solid blue; */
+        }
+
+        #btn {
+            margin-left: 4rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 1rem;
+            background: linear-gradient(to left, red, blue, green);
+            color: white;
+            box-shadow: 0px 0px 2px 1px yellowgreen;
+            cursor: pointer;
+            position: fixed;
+            /* top: 110%; */
+            left: 40%;
+
+        }
+
+
+        .one {
+            grid-column: 1/2;
+            background: url(shubham.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .two {
+            grid-column: 2/3;
+            background: url(Nikhil.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .three {
+            grid-column: 3/4;
+            background: url(Together.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .four {
+            grid-column: 1/2;
+            background: url(nikmss.jpg);
+            background-position: 100% 10%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .five {
+            grid-column: 2/3;
+            background: url(mottu1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .six {
+            grid-column: 3/4;
+            background: url(mottamss.jpg);
+            background-position: 100% 25%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            box-shadow: 1px 1px 1px 2px blueviolet;
+        }
+
+        .photospace {
+            width: 80%;
+            /* border: 3px solid yellowgreen; */
+            margin: 2rem auto;
+        }
+
+        .photospace img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photospace">
+        <img id="showme" src="Together.jpg" alt="">
+    </div>
+    <!-- <div class="container" id="hideme">
+        <div class="main">
+            <div class="box one">Shubham</div>
+            <div class="box two">Nik</div>
+            <div class="box three">Sandy</div>
+            <div class="box four">Chill</div>
+            <div class="box five">Mottu</div>
+            <div class="box six">Fun</div>
+        </div>
+    </div>
+    <button id="btn" onclick="myFunction()">Hide Me</button> -->
+
+    <script>
+        function myFunction() {
+            var hideDisplay = document.getElementById('hideme');
+            var batton = document.getElementById('btn');
+            var displaySetting = hideDisplay.style.display;
+            if (displaySetting == 'block') {
+                hideDisplay.style.display = 'none';
+                batton.innerHTML = 'Show Me';
+            } else {
+                hideDisplay.style.display = 'block';
+                batton.innerHTML = 'Hide Me';
+            }
+        }
+
+        var images = ['motta.jpg',
+                      'Together.jpg',
+            'mottamss.jpg',
+            'mottu1.jpg',
+            'Nikhil.jpg',
+            'nikmss.jpg'];
+        var i = 0;
+        function slideShow() {
+            document.getElementById('showme').src = images[i]
+            if (i < (images.length - 1))
+                i++;
+            else
+                i = 0;
+
+        }
+        setInterval(slideShow, 2000)
+    </script>
+
+</body>
+
+</html>

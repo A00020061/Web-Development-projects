@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Flexbox</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+        }
+
+        .box_container {
+            background-image:  url(https://images.unsplash.com/photo-1488036106564-87ecb155bb15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fG11c2ljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            aspect-ratio: 1/1;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            /* border: 1px solid black; */
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            background-color: #1abc9c;
+            color: rgb(219, 95, 95);
+            font-weight: 700;
+        }
+
+        .container h1 {
+            padding: 1rem 0;
+        }
+
+        nav {
+            /* border: 1px solid black; */
+        }
+
+        .nav-list {
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(222, 184, 135, 0.795);
+
+        }
+
+        .nav-list li {
+            list-style: none;
+            /* border: 1px solid blue; */
+            margin: .5rem 1rem;
+            padding: .5rem;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        #list_right {
+            margin-left: auto;
+        }
+        main{
+            /* border: 1px solid yellow; */
+            height: 90vh;
+        }
+        .main_heading{
+            /* border: 1px solid white; */
+            text-align: center;
+        }
+        .main_heading h1{
+            color: white;
+            font-size: 2.5rem;
+            /* border: 1px solid white; */
+            display: inline-block;
+            letter-spacing: 1px;
+            margin: 1rem;
+            padding: .5rem;
+            word-spacing: 3px;
+        }
+        span{
+            animation: whatwecando 1s infinite;
+            font-size: 3.5rem;
+        }
+        @keyframes whatwecando{
+            0%{color: blue;}
+            25%{color: white;}
+            50%{color: green;}
+            100%{color: yellow;}
+        }
+        .music_controller_area{
+            /* border: 1px solid white; */
+            display: flex;
+            color: white;
+            margin-top: 4rem;
+            justify-content: center;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+        #play{
+            /* border: 1px solid white; */
+            margin: 1rem 5rem;
+            font-size: 7rem;
+            cursor: pointer;
+        }
+        #pre,#next{
+            font-size: 4rem;
+            margin: 2.7rem 3rem;
+            cursor: pointer;
+        }
+        .backward_button,.next_button{
+            padding-top: 3rem;
+        }
+        .music_timing_controler{
+            /* border: 1px solid white; */
+            color: white;
+            display: flex;
+            justify-content: center; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box_container">
+        <div class="container">
+
+            <h1>Adelaide is a beautiful city in the world.</h1>
+        </div>
+        <!-- <header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service information goes here</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="list_right"><a href="#">Sign In</a></li>
+                </ul>
+            </nav>
+        </header> -->
+        <main>
+            <div class="main_heading">
+                <h1>Explore your music with latest <span>songs</span></h1>
+            </div>
+            <div class="music_controller_area">
+                
+                <i id="pre" onclick="playBack()" class="fa fa-step-backward fa-2x"></i>
+                <i id="play" onclick="playPause()" class="fa fa-play-circle fa-5x"></i>
+                <i id="next" onclick="playNext()" class="fa fa-step-forward fa-2x"></i>
+            </div>
+            <!-- <div class="music_timing_controler">
+                <div class="current_music_time">00:00</div>
+                <input type="range" max="100" min="0"  class="range_slider" value="0">
+                <div class="total_music_time">00:00</div>
+            </div> -->
+
+        </main>
+    </div>
+    <script src="../Javascript/webyoutubemusichomepage.js"></script>
+    <!-- <script>
+        let pause_btn = document.querySelector('.playPause');
+        let backward_btn = document.querySelector('.playBack');
+        let next_btn = document.querySelector('.playNext');
+
+        let track_index = 0;
+        let curr_track = document.createElement('audio');
+        isPlaying = false;
+        let updateTimer;
+        let track_list =[{path: '../music/song1.mp3'},
+            {path: '../music/song2.mp3'},
+            {path: '../music/song3.mp3'},
+            {path: '../music/song4.mp3'},
+            {path: '../music/song1.mp3'}
+        ]
+
+        function loadTrack(track_index){
+            clearInterval(updateTimer);
+            // resetValues();
+            //load a new track
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+            //update time interval
+            updateTimer = setInterval(seekUpdate,1000);
+            //move to the next track if the current finishes playing using the 'ended' event
+            curr_track.addEventListener('ended',next_song)
+        }
+        function playTrack(){
+            curr_track.play();
+            isPlaying = true;
+            pause_btn.innerHTML = "<i class= 'fa fa-pause-circle fa-5x'></i>";
+        }
+        function pauseTrack(){
+            curr_track.pause();
+            isPlaying =false;
+            pause_btn.innerHTML = "<i class= 'fa fa-play-circle fa-5x'></i>";
+
+        }
+        function play_pause_track(){
+            if(!isPlaying)playTrack();
+            else pauseTrack();
+        }
+        
+        function previous_song(){
+            if(track_index>0){
+                track_index -=1;
+            }else{
+                track_index = track_list.length-1;
+            }
+            curr_track.load();
+            playTrack();
+        }
+        function next_song(){
+            if(track_index<track_list.length-1){
+                track_index+=1;
+            }else{
+                track_index =0;
+            }
+            curr_track.load();
+            playTrack();
+        }
+        loadTrack(track_index);
+    </script> -->
+</body>
+
+</html>

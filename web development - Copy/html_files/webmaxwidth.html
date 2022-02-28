@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Javascipt</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #myImage, #yourImage{
+            width: 10rem;
+            height: 200px;
+        }
+        #size-more{
+            font-size: 25px;
+        }
+        .empty{
+            width: 80%;
+            height: 50vh;
+            background: linear-gradient(to left, red, blue, green);
+            margin-inline: auto;
+            text-align: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 2px 2px 4px 6px blue;
+            margin-top: 1rem;
+            color: white;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <button id="bulb-on" onclick="document.getElementById('myImage').src='https://thumbs.dreamstime.com/b/vector-light-bulb-white-file-eps-format-34983265.jpg'">Turn on the Bulb</button>
+    <!-- <img id="myImage" src="https://thumbs.dreamstime.com/b/vector-light-bulb-white-file-eps-format-34983265.jpg" alt=""> -->
+    <img id="myImage" src="https://previews.123rf.com/images/peshkova/peshkova1206/peshkova120600306/14060282-light-bulb-on-a-white-background.jpg" alt="">
+    <button onclick="document.getElementById('myImage').src='https://previews.123rf.com/images/peshkova/peshkova1206/peshkova120600306/14060282-light-bulb-on-a-white-background.jpg'">Turn off the Bulb</button>
+    <h3 id="size-more">Here i am going to share the trick where you can increase the size of your text.</h3>
+    <button onclick="document.getElementById('size-more').style.fontsize='5px'" >Click Me</button>
+    <button onclick="document.getElementById('size-more').style.display='none'">Hide Me</button>
+    <button onclick="document.getElementById('size-more').style.display='block'">Show Me</button>
+    <div class="empty" id="box">I am an empty container.</div>
+    <button onclick="document.getElementById('box').style.fontsize='50px'">mySize</button>
+    
+    </script>
+</body>
+</html>

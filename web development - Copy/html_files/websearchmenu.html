@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Menu Bar</title>
+    <style>
+        body {
+
+
+            background-color: wheat;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .top {
+            background-color: violet;
+            padding: .05rem .3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .left {
+            flex: 30%;
+            /* border: 1px solid black; */
+            background-color: burlywood;
+
+
+        }
+
+
+        #scoregate {
+            border: none;
+            width: 100%;
+            padding: .5rem;
+            font-size: 1rem;
+            color: #646464;
+            overflow: hidden;
+
+        }
+
+        /* .left ul{
+
+        } */
+        .left ul li {
+            list-style: none;
+            padding: .5rem 0rem;
+            margin-left: -2rem;
+
+
+        }
+
+        .left ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .right {
+            border: 1px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            flex: 70%;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+
+        <h1>Search Menu</h1>
+        <p>Start to type for a specific category inside the search bar to "filter"the search options.</p>
+    </div>
+    <div class="row">
+
+
+        <div class="left">
+            <h1 class="menu" id="search">Menu</h1>
+            <input id="scoregate" onkeyup="myFunction()" type="text" placeholder="search">
+            <ul id="myMenu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">jQuary</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">Bootstrap</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </div>
+        <div class="right" id="page">
+            <h2>Page Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eos nostrum quas suscipit neque ut?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos rerum dolorem nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, mollitia.</p>
+        </div>
+    </div>
+    <p id="printme">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ratione sapiente maxime ea et, eveniet iusto
+        rerum nemo at, nisi culpa. Necessitatibus obcaecati eaque quis?25 
+    </p><button onclick="myFun('printme')">Take me first</button>
+    <p id="printmeagain">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatibus expedita qui in distinctio laudantium
+        pariatur molestiae, eveniet fugit et! Animi cum ea porro maxime quibusdam enim, consectetur accusamus
+        voluptatibus!35
+    </p><button onclick="myFun('printmeagain')">Take me second</button>
+    <p id="printmenotagain">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aperiam hic magnam placeat sapiente qui ut
+        quisquam ullam saepe officia dolores possimus voluptate culpa labore, sed neque est, ea molestias aut,
+        architecto at aspernatur animi.40
+    </p><button onclick="myFun('printmenotagain')">Take me third</button>
+    <button onclick="window.print()">Whole Page</button>
+    <script>
+        function myFunction(){
+            var filter = document.getElementById('scoregate').value.toUpperCase();
+            var myunorderlist = document.getElementById('myMenu');
+            var mylist = myunorderlist.getElementsByTagName('li');
+            for(i=0; i<mylist.length; i++){
+                var mylista = mylist[i].getElementsByTagName('a')[0];
+                var textvalue = mylista.textContent;
+                if(textvalue.toUpperCase().indexOf(filter)> -1){
+                    mylist[i].style.display = '';
+                }else{
+                    mylist[i].style.display = 'none';
+                }
+            }
+        function myFun(paravalue){
+            var backup = document.body.innerHTML;
+            var textprint = document.getElementById(paravalue).innerHTML;
+            document.body.innerHTML = textprint;
+            window.print();
+            document.body.innerHTML = backup;
+        }
+
+
+        // function myFunction(){
+        //     let filter = document.getElementById("scoregate").value.toUpperCase();
+        //     let ul = document.getElementById("myMenu");
+        //     let li = ul.getElementsByTagName("li");
+        //     for(i=0; i<li.length; i++){
+        //         let a = li[i].getElementsByTagName("a")[0];
+        //         let textValue= a.textContent;
+        //         if(textValue.toUpperCase().indexOf(filter)>-1)
+        //         li[i].style.display="";
+        //     }else{
+        //         li[i].style.display="none";
+        //     }
+        // }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

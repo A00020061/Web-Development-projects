@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to print with search menu</title>
+    <style>
+        #myMenu li {
+            list-style: none;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="box">
+        <div class="container1" id="box1">
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis voluptas distinctio
+                eveniet, fugit rerum ipsam quam nulla nesciunt exercitationem obcaecati ratione aut corporis error
+                possimus id eius unde rem?30</p> <button onclick="myFun('para')">Take me first</button>
+            <h4 id="head6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita deserunt nesciunt autem
+                distinctio iste veritatis rerum aut ea veniam voluptatem!20</h4><button onclick="myFun('head6')">Take me
+                second</button>
+            <h2 id="head2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, quia?10</h2> <button
+                onclick="myFun('head2')" ondblclick="myScore()">Take me third</button> <br>
+            <input type="text" id="giveinput" placeholder="Search here ..." onkeyup="myFunction()">
+            <ul id="myMenu">
+                <li><a href="#">Karan</a></li>
+                <li><a href="#">Ankit</a></li>
+                <li><a href="#">Rahul</a></li>
+                <li><a href="#">Akash</a></li>
+                <li><a href="#">Vikas</a></li>
+                <li><a href="#">Karma</a></li>
+                <li><a href="#">Sandy</a></li>
+                <li><a href="#">Hardeep</a></li>
+                <li><a href="#">Abhi</a></li>
+                <li><a href="#">Sonu</a></li>
+            </ul>
+            <!-- <div id="notfound" style="display: none;">Not found</div> -->
+
+        </div>
+        <button onclick="window.print()">Whole page</button>
+    </div>
+    <script src="webpractice.js"></script>
+</body>
+
+</html>

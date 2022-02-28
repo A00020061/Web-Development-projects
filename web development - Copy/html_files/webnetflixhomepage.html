@@ -1,0 +1,542 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home page</title>
+    <style>
+        .hero{
+            /* background-color: wheat; */
+            position: relative;
+            margin: 2em;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            overflow: hidden;
+            /* padding: 19em 0; */
+            color: white;
+            min-height: 100vh;
+
+        }
+        #background-video{
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <video id="background-video" autoplay loop muted>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4" type="video/mp4">
+          </video>
+          <h1>THIS IS A BUSY ROUNDABOUT.</h1>
+          
+
+    </div>
+      
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Netflix Home Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+
+
+        }
+
+        .container {
+            position: relative;
+
+
+            overflow: hidden;
+            min-height: 100vh;
+
+
+        }
+
+        #background__video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+        }
+
+        #netflix {
+            color: red;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .navbar {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 3em;
+            text-align: center;
+            position: absolute;
+            flex-wrap: nowrap;
+            min-width: 100%;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            /* border: 1px solid white; */
+            float: left;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: .8em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .float-right {
+            display: flex;
+            position: absolute;
+            right: 5rem;
+            flex-wrap: wrap;
+
+
+        }
+
+        .float-right li {
+            list-style: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .movie_detail {
+            color: white;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+
+
+            /* transform: translate(-60%, %); */
+        }
+
+        .lion {
+            font-size: 6rem;
+            letter-spacing: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-wrap: wrap;
+            min-width: auto;
+        }
+
+        .detail {
+            font-size: 1.3rem;
+            width: 35rem;
+            color: pink;
+            margin-top: -3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: .8em;
+            font-size: 1.2em;
+            margin-right: .2em;
+            border-radius: .2em;
+        }
+
+        #more_info {
+            background-color: rgba(255, 192, 203, 0.336);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #play {
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #play:hover {
+            background-color: rgba(255, 192, 203, 0.726);
+        }
+
+        #more_info:hover {
+            background-color: rgba(255, 0, 0, 0.774);
+            color: white;
+        }
+
+        .pic_info {
+            background-color: #141414;
+            color: pink;
+            position: relative;
+            min-width: 100%;
+            */ min-height: 100%;
+
+        }
+
+        .type {
+            padding: .5em 2em;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .list {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 15%;
+            /* overscroll-behavior-inline: contain; */
+            overflow-x: auto;
+        }
+
+        .list>img {
+            aspect-ratio: 1/1;
+        }
+
+
+        img {
+            float: left;
+            width: 12.8em;
+            height: 10em;
+            object-fit: cover;
+            padding-right: .5em;
+            margin-bottom: 1em;
+            object-position: 100% 10%;
+
+        }
+
+        .pic_info1 {
+            background-color: #141414;
+            color: pink;
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .pic_info2 {
+            background-color: #141414;
+            color: pink;
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .bottom {
+            background-color: #141414;
+            position: relative;
+            min-width: auto;
+            min-height: auto;
+
+        }
+
+        footer {
+            padding: 3em 12em;
+
+            min-height: auto;
+            min-width: auto;
+            position: relative;
+        }
+
+        nav {
+            color: white;
+            font-size: 1.8em;
+            margin-left: 1.9em;
+        }
+
+        nav i {
+            padding: .5em;
+            object-fit: cover;
+
+        }
+
+        .menu {
+            display: inline-flex;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #808064;
+            font-size: 1em;
+            display: block;
+            padding: .5em 1em;
+            min-width: auto;
+            min-height: auto;
+        }
+
+        .left,
+        .right,
+        .middle,
+        .rightfar {
+            margin: 0em 2.5em;
+        }
+
+        .servicecode {
+            margin: .7em 3.5em;
+        }
+
+        .servicecode button {
+            background-color: #141414;
+            display: inline-flex;
+            border: .5px solid #808064;
+            color: #808064;
+            font-size: .8em;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <h1 id="netflix">NETFLIX</h1>
+
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">TV Shows</a></li>
+                    <li><a href="">Movies</a></li>
+                    <li><a href="">New & Popular</a></li>
+                    <li><a href="">My List</a></li>
+                </ul>
+                <div class="float-right">
+
+                    <li id="search"><i class="fa fa-search"></i></li>
+                    <li id="notification"><i class="fa fa-bell"></i></li>
+                </div>
+
+            </div>
+        </header>
+        <div class="video">
+            <video id="background__video" loop muted autoplay>
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4"
+                    type="video/mp4">
+            </video>
+
+        </div>
+        <div class="movie_detail">
+            <h1 class="lion"> LION</h1>
+            <p class="detail">An Indian man who was separated from his mother at age 5 and adopted by an Austraian
+                couple returns home, determined
+                to find his birth family.</p>
+            <button id="play"><i class="fa fa-play"></i> &nbsp; Play</button>
+            <button id="more_info"><i class="fa fa-info"></i> &nbsp; More info.</button>
+
+        </div>
+
+    </div>
+    <div class="pic_info">
+        <main class="type">
+            <h2 class="recently">Recently added</h2>
+            <div class="list">
+                <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1590179068383-b9c69aacebd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1623375428145-4d276c83ce5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1518134346374-184f9d21cea2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vdmllJTIwcG9zdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW92aWUlMjBwb3N0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <img src="https://media.istockphoto.com/photos/spaceman-in-the-surf-picture-id1213550611?b=1&k=20&m=1213550611&s=170667a&w=0&h=3jfQiPnApcmcUKKWFyeO6Bor-pcPZ3whOqwmhz0-LBI="
+                    alt="">
+                <img src="https://miro.medium.com/max/600/1*cmf8bBVyJj96id3JBgdNVg.png" alt="">
+                <img src="https://miro.medium.com/max/896/1*Yq87sc0lW2XtBHdNSK1vyA.png" alt="">
+                <img src="https://miro.medium.com/max/1056/1*Fe4G96041cyC3uoxZK36_Q.png" alt="">
+                <img src="https://miro.medium.com/max/3056/1*iCZg-QS6coRLPC8BfQCiPg.png" alt="">
+                <img src="https://miro.medium.com/max/1250/1*d4bhA3XhzoAhIczClvahcA.png" alt="">
+                <img src="https://miro.medium.com/max/4012/1*0K1Fva-TRHz1117h-Um2wg.png" alt="">
+
+            </div>
+        </main>
+
+        <main class="type">
+            <h2 class="trendingnow">Trending Now</h2>
+            <div class="list2">
+                <img src="https://miro.medium.com/max/600/1*cmf8bBVyJj96id3JBgdNVg.png" alt="">
+                <img src="https://miro.medium.com/max/896/1*Yq87sc0lW2XtBHdNSK1vyA.png" alt="">
+                <img src="https://miro.medium.com/max/1056/1*Fe4G96041cyC3uoxZK36_Q.png" alt="">
+                <img src="https://miro.medium.com/max/3056/1*iCZg-QS6coRLPC8BfQCiPg.png" alt="">
+                <img src="https://miro.medium.com/max/1250/1*d4bhA3XhzoAhIczClvahcA.png" alt="">
+                <img src="https://miro.medium.com/max/4012/1*0K1Fva-TRHz1117h-Um2wg.png" alt="">
+                <img src="https://miro.medium.com/max/3358/1*qhbuC-AvijQ_eSuLIjH1-g.jpeg" alt="">
+            </div>
+
+        </main>
+        <main class="type">
+            <h2 class="documentries">Documentries</h2>
+            <div class="list3">
+                <img src="https://i.pinimg.com/236x/b8/33/7f/b8337f89933ad0f7b823c9e610b9c974.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/9f/ae/f2/9faef239ab3f0cc56d4e08017172e4ea.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/8d/9f/60/8d9f60516f253b7be5f0baf62706f948.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/98/d1/1f/98d11f47fd3f72a945ba7013bc2f091f.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/37/6b/a3/376ba366f2b13724b45c6420c8d19510.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/10/c2/70/10c2700aa7d6e05ed5aa29af8491c076.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/b1/24/a6/b124a60d19eb4e9e6aba1f8e26c3af03.jpg" alt="">
+            </div>
+        </main>
+
+    </div>
+    <div class="pic_info1">
+        <main class="type">
+            <h2 class="tv">US TV Dramas</h2>
+            <div class="list4">
+                <img src="https://i.pinimg.com/236x/a3/73/bd/a373bd6d0105fbd5348cf0384fa342d1.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/dc/09/65/dc0965b6562a634669b792d2d0310a84.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/d2/23/36/d22336375fb295c73f850f376ca6d4c2.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/94/bd/1b/94bd1bda840116b4e16e3fa509d957a0.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/be/56/63/be566351dbfdf1248bd24d57eb75ecb2.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/2d/53/7a/2d537aee7bfb1030bde7b479d60fab41.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/bf/bd/22/bfbd2222a9e0ac4d952352acd357063e.jpg" alt="">
+            </div>
+
+        </main>
+        <main class="type">
+            <h2 class="action">Action Thrillers</h2>
+            <div class="thrillior">
+                <img src="https://i.pinimg.com/236x/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/d5/e2/73/d5e2734c5fd1705fd8118a8aefe0a0dc.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/e8/df/4d/e8df4dcb42a6197c7c33a7fe438e8b9b.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/e9/01/f7/e901f7822b26a0f017b85bf966b31949.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/61/30/50/613050afce2e8f98352a6aa8aebcc833.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/1b/ef/c3/1befc3f874525dacb0a2049da395c56a.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/73/3c/eb/733cebfeb0c631ba9f7906061e6366ee.jpg" alt="">
+            </div>
+
+        </main>
+        <main class="type">
+            <h2 class="hero">Action Heroes</h2>
+            <div class="action">
+                <img src="https://i.pinimg.com/236x/4b/a0/04/4ba004f2f2baa18c35540a7eff00b00f.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/89/1d/84/891d84afd976a2c9e429686508df6a04.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/a7/a5/59/a7a5592d56ffee2dba71c1eb7b359173.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/b2/1e/37/b21e37664b778a4ec5c90431e03dd6ca.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/d2/ae/10/d2ae105a2b7c9c4cdcb60e0cf09faeb8.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/57/cf/1b/57cf1be583467f2fc46c0db060d08c7e.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/6d/e3/ae/6de3aebc9f380e34d4b1d08b8723956c.jpg" alt="">
+            </div>
+
+
+        </main>
+    </div>
+    <div class="pic_info2">
+        <main class="type">
+            <h2 class="comody">Comodies</h2>
+            <div class="comodies">
+                <img src="https://i.pinimg.com/236x/d2/58/7f/d2587f8ca6aa884a22af34ecd278fe62.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/06/fa/6c/06fa6c5aa451e795c477719caa67391a.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/f6/3e/b5/f63eb5c57ef48d3f2fc66a9a576459bd.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/8a/a6/94/8aa694c865c9cf94becc0e382b18caac.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/87/cc/75/87cc75214b0bb2e3cd58bccc83fde5c7.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/88/fb/ee/88fbee528e1a6b275eea547153117666.jpg" alt="">
+                <img src="https://i.pinimg.com/236x/63/53/e8/6353e81b68b35be5265a96e0c9dfd6d2.jpg" alt="">
+            </div>
+        </main>
+        <main class="type">
+            <h2 class="award">Award-Winning Films</h2>
+            <div class="awardfilms">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/3ee28f0781132b5e19ddd28628f29289_07932f11-5f00-43c5-a807-e6ff5f3a9654_500x749.jpg?v=1573587231"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/d5cfdab5162ce79515c10c48b0c19cfe_ee891663-d226-4b27-901d-1451101eff10_500x749.jpg?v=1573617424"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/a40013903077bcf322f80dd32c7d3853_3c3eba47-d822-49d6-bb38-b24171e99049_500x749.jpg?v=1573616165"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/3f3bc5f83c1ce6b2b62aaf30b808fbfc_34978cd0-f5bb-4d06-935c-24902ecf5e6d_500x749.jpg?v=1573618962"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/58ab5be5a449fb4df6c1e3cba2c1e03e_804f326a-8e83-480b-adf4-d5e3c73fa1b8_500x749.jpg?v=1573590221"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/32426a42eca12213a7aeb272103c3ec6_abc2d57f-2dff-4640-870c-2c6de7c126e2_500x749.jpg?v=1573655059"
+                    alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/65b0a0f560461a084f859ba6b294e5c9_0e992660-d695-4d7b-88cf-fe5b926804e3_500x749.jpg?v=1573594846"
+                    alt="">
+            </div>
+        </main>
+        <main class="type">
+            <h2 class="inspire">Inspiring Movies</h2>
+            <div class="inspiring">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/001-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/003-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/004-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/005-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/006-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/007-movie-poster.jpg"
+                    alt="">
+                <img src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2016/01/009-movie-poster.jpg"
+                    alt="">
+            </div>
+        </main>
+
+    </div>
+    <div class="bottom">
+        <footer>
+            <nav>
+
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube"></i>
+            </nav>
+            <div class="menu">
+                <div class="left">
+                    <a href="#">Audio and subtities</a>
+                    <a href="#">Media Centre</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div class="middle">
+                    <a href="#">Audio Description</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Legal notices</a>
+                </div>
+                <div class="right">
+                    <a href="#">Help Centre</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Cookie preferences</a>
+                </div>
+                <div class="rightfar">
+                    <a href="#">Gift cards</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Corporate information</a>
+                </div>
+
+            </div>
+            <div class="servicecode">
+                <button>Service code</button>
+            </div>
+
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>

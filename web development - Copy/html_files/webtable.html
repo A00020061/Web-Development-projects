@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Score</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            /* border: 1px solid black; */
+            
+        }
+        .hero{
+            /* border: 1px solid black; */
+
+        }
+        td{
+            border: 1px solid black;
+            padding: .6rem 0;
+            padding-right: 4rem;
+            box-shadow: 0px 0px 0px 0.5px blue;
+            
+        
+            
+        }
+        #what{
+            background-color: #646464;
+            color: white;
+            padding: .6rem;
+            letter-spacing: 1px;
+        }
+        input{
+            width: auto;
+            padding: .6rem 0;
+            font-size: 1rem;
+            box-shadow: 0px 0px 0px 1px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="what" id="question">
+        <p id="printme">Today, i am going to fill the detail of the question and need to set up the detail 
+            what we can do for you and make your everything is need to net and clean.
+        </p><button onclick="myFun('printme')" >Take Me</button>
+        <p id="notprintme">This is the test that has been varified by the Australia government and 
+            mentioned that you can not print the whole page without government permission.
+            <button onclick="myFun('notprintme')">Take to me </button>
+        </p>
+    </div>
+    <div class="container">
+        <input type="text" id="find" placeholder="search here" onkeyup="searchUp()">
+        <table class="hero" id="king">
+            <tr id='score'>
+                <td id='what'>Name</td>
+                <td id='what'>Country</td>
+                <td id='what'>Language</td>
+            </tr>
+            <tr id='score'>
+                <td>Sandeep</td>
+                <td>India</td>
+                <td>Hindi</td>
+            </tr>
+            <tr id='score'>
+                <td>Thomas</td>
+                <td>England</td>
+                <td>English</td>
+            </tr>
+            <tr id='score'>
+                <td>Anderson</td>
+                <td>USA</td>
+                <td>English</td>
+            </tr>
+            <tr id='score'>
+                <td>Tikka</td>
+                <td>Nepal</td>
+                <td>Nepali</td>
+            </tr>
+            <tr id='score'>
+                <td>Tasnim</td>
+                <td>Pakistan</td>
+                <td>Urdu</td>
+            </tr>
+            <tr id='score'>
+                <td>Salman</td>
+                <td>Afganistan</td>
+                <td>Afgani</td>
+            </tr>
+            <tr id='score'>
+                <td>Amir</td>
+                <td>Iran</td>
+                <td>Irani</td>
+            </tr>
+            <tr id='score'>
+                <td>Watson</td>
+                <td>Canada</td>
+                <td>French</td>
+            </tr>
+            <tr id='score'>
+                <td>Ricky Pointing</td>
+                <td>Australia</td>
+                <td>English</td>
+            </tr>
+            <tr id='score'>
+                <td>Hakim</td>
+                <td>Bangladesh</td>
+                <td>Bangli</td>
+            </tr>
+            <tr id='score'>
+                <td>Jack</td>
+                <td>New Zeland</td>
+                <td>English</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function searchUp(){
+            let filter= document.getElementById('find').value.toUpperCase();
+            let myTable= document.getElementById('king');
+            let tablerow=myTable.getElementsByTagName('tr');
+            for(i=0; i<tablerow.length; i++){
+                let td=tablerow[i].getElementsByTagName('td')[0];
+                let dataValue=td.textContent;
+                if(dataValue.toUpperCase().indexOf(filter)>-1){
+                    tablerow[i].style.display='';
+                }else{
+                    tablerow[i].style.display='none';
+                }
+            }
+        }
+    
+
+        function myFun(paravalue){
+            var backup = document.body.innerHTML;
+            var divcontent = document.getElementById(paravalue).innerHTML; 
+            document.body.innerHTML = divcontent;
+            window.print();
+            document.body.innerHTML = backup;
+
+        }
+
+    </script>
+</body>
+</html>

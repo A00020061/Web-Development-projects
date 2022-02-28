@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 23.5%;
+            padding: 80px;
+            font-size: 25px;
+            color: black;
+            cursor: pointer;
+            text-align: center;
+            margin: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            
+        }
+        /* .containerTab {
+            padding: 50px;
+            color: white;
+        } */
+        .box:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+            
+        }
+        /* .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        } */
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>Expanding Grid</h2>
+        <p>Click on the boxes below:</p>
+    </div>
+    <div class="box">
+        <div class="column" onclick="openTab('b1');" style="background: #f1f1f1;">Box 1</div>
+        <div class="column" onclick="openTab('b2');" style="background: #f1f1f1;">Box 2</div>
+        <div class="column" onclick="openTab('b3');" style="background: #f1f1f1;">Box 3</div>
+        <div class="column" style="background-color: #f1f1f1;">Box 4</div>
+    </div>
+    <!-- <div id="b1" class="containerTab" style="display: none; background: green;">
+    <span onclick="this.parentElement.style.dispay='none'" class="closebtn">&times;</span>
+    <h2>Box 1</h2>
+    <p>Hello sandeep kumar how are you. what are you doing right now. we have a proposal for you.</p>
+    </div>
+    <div class="containerTab" id="b2" style="background: blue; display: none;">
+    <span onclick="this.parentElement.style.dispay='none'" class="closebtn">&times;</span>
+    <h2>Box 2</h2>
+    <p>Torrens University is the best place for your higher study that makes you
+        solid applicant in competition world.
+    </p>
+    </div>
+    <div class="containerTab" id="b3" style="background: red; display: none;">
+    <span onclick="this.parentElement.style.display= 'none'" class="closebtn">&times;</span>
+    <h2>Box 3</h2>
+    <p>Covid-19 has become rapidly spreadly epidemic in the world.</p>
+    </div>
+    <script>
+        function containerTab(tabName){
+            var i, x;
+            x=document.getElementsByClassName("containerTab");
+            for (i = 0; i< x.length; i++){
+                x[i].style.dispay = "none";
+            }
+            document.getElementById(tabName).style.dispay ="block";
+        }
+    </script> -->
+</body>
+</html>

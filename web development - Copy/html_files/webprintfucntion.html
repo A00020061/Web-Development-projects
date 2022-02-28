@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Print Element</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @media print {
+            #what {
+                display: none;
+            }
+
+            #section p {
+                background-color: blue;
+            }
+        }
+
+        @media print {
+            #btnbtn {
+                display: none;
+            }
+        }
+
+        .table_content_section,
+        .search_container {
+            border: 1px solid black;
+        }
+
+        .search_container {
+            width: 60%;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        input[type=search] {
+            width: 100%;
+            margin: .5rem auto !important;
+            padding: .5rem;
+            transition: width 0.5s ease-in-out;
+        }
+
+        input[type=search]:focus {
+            width: 100%;
+        }
+
+        .search_area {
+            /* border: 1px solid black; */
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main id="printsection">
+            <h1>This is my content for printing the image</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, commodi? Repellendus at id ipsum,
+                corporis tempore, beatae praesentium eum impedit explicabo ea voluptatem. Recusandae, dolorum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis rerum similique ullam illo nulla enim ad
+                dignissimos, maxime nesciunt dolorum provident voluptatum assumenda debitis eaque iure vitae doloribus
+                pariatur! Modi.</p>
+        </main>
+        <button id="btnbtn" onclick="PrintElement('printsection')">Print</button>
+        <div id="section">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat deserunt, excepturi laborum, soluta amet
+                inventore, doloremque neque distinctio possimus delectus non? Assumenda aperiam nesciunt explicabo
+                cupiditate a sit delectus vel voluptatem eligendi nobis dolor voluptas impedit saepe inventore animi
+                enim ipsam dolores eius hic, id ipsum minus dolore. Molestiae, deleniti.</p>
+            <h2 id="what">this is the print commend where every person can take a commend form their boss.</h2>
+        </div>
+        <button id="btnbtn" onclick="PrintElement('section')">Print</button>
+    </div>
+    <div class="table_content_section">
+        <div class="search_area">
+
+            <input id="input" type="search" placeholder="Search here..." onkeyup="searchMe()">
+        </div>
+        <table id="table_data" class="search_container">
+
+
+            <tr id="table_row">
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Country</td>
+                <td>Language</td>
+                <td>Profession</td>
+            </tr>
+            <tr id="table_row">
+                <td>Sandeep Kumar</td>
+                <td>Male</td>
+                <td>India</td>
+                <td>English</td>
+                <td>Student</td>
+            </tr>
+            <tr id="table_row">
+                <td>Ankit</td>
+                <td>Male</td>
+                <td>Japan</td>
+                <td>Japanies</td>
+                <td>Engineer</td>
+            </tr>
+            <tr id="table_row">
+                <td>Alisha</td>
+                <td>Female</td>
+                <td>USA</td>
+                <td>English</td>
+                <td>Software Developer</td>
+            </tr>
+            <tr id="table_row">
+                <td>Kim Jo</td>
+                <td>Male</td>
+                <td>South Korea</td>
+                <td>Koriean</td>
+                <td>Self-Employed</td>
+            </tr>
+            <tr id="table_row">
+                <td>Dolphin Rebecca</td>
+                <td>Female</td>
+                <td>Australia</td>
+                <td>English</td>
+                <td>Receptionst</td>
+            </tr>
+            <tr id="table_row">
+                <td>David John</td>
+                <td>Male</td>
+                <td>UK</td>
+                <td>English</td>
+                <td>Business Holder</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <button id="whole_page" onclick="printPage()">Print Page</button>
+    <script>
+        function searchMe(){
+            let filter = document.getElementById('input').value.toUpperCase();
+            let mytable = document.getElementById('table_data');
+            let mytablerow = mytable.getElementsByTagName('tr');
+            for(let i=0; i<mytablerow.length; i++){
+                let tabledata = mytablerow[i].getElementsByTagName('td')[0];
+                let tableContent = tabledata.textContent;
+                if(tableContent.toUpperCase().indexOf(filter)>-1){
+                    tableContent[i].style.display = '';
+                }else{
+                    tableContent[i].style.display = 'none';
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        function printPage() {
+            var whole_page = document.getElementById('whole_page');
+            whole_page.style.visibility = 'hidden';
+            window.print();
+        }
+        function PrintElement(paravalue) {
+            var btnbtn = document.getElementById(paravalue).innerHTML;
+            var page_backup = document.body.innerHTML;
+            document.body.innerHTML = btnbtn;
+            window.print();
+            document.body.innerHTML = page_backup;
+        }
+
+    </script>
+</body>
+
+</html>
