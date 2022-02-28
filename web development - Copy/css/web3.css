@@ -1,0 +1,303 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+.container{
+    /* border: 3px solid black; */
+    width: 100%;
+}
+.main_container{
+    border: 5px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.university_sidebar{
+    width: 90%;
+}
+.rightside{
+    width: 10%;
+}
+main{
+    /* border: 3px solid  blue; */
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* display: flex; */
+}
+header{
+    /* border: 2px solid green; */
+    background-color: rgba(128, 128, 128, 0.315);
+    /* width: 100%; */
+}
+.head{
+    /* border: 2px solid yellow; */
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    text-align: center;
+    padding: .5rem;
+}
+.head h1{
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.head p{
+    letter-spacing: .5px;
+    font-size: 1.1rem;
+}
+nav{
+    border: 1px solid black;
+    padding: 0px;
+    background-color: #16858d;
+
+}
+.navbar{
+  
+    border-radius: 10px;
+    /* border: 1px solid yellow; */
+    
+}
+.navbar ul{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+   
+}
+.navbar a{
+    /* border: 1px solid black; */
+    /* padding: 5px 5px 10px 10px; */
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    color: wheat;
+}
+.fa{
+    padding-right: 6px;
+}
+.google_map{
+    margin-left: auto;  
+}
+.University_polish_start{
+    border: 1px solid green;
+    width: 75%;
+}
+.display_sign_board{
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1100px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+   
+}
+#University_logo{
+    width: 15%;
+    margin-right: 1rem;
+}
+/* #unisa_university{
+    height: 30vh;
+    border: 2px solid black;
+} */
+.university_introduction, .university_bottomground{
+    /* border: 2px solid pink; */
+    padding: 0 0 .5rem .5rem;
+    text-align: center;
+}
+.fakeimg_University{
+    /* border: 2px solid black; */
+    width: 50%;
+    
+    margin: 0 auto;
+    
+}
+#original_campus_img{
+   
+    object-fit: cover;
+   
+}
+#btn_University a{
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: red;
+}
+#btn_University{
+    padding: .5rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 3px 1px red;
+    margin-bottom: 1rem;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header.head {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.315);
+
+    padding: 10px;
+
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 16px;
+    display: block;
+    float: left;
+    color: #f2f2f2;
+
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.leftside {
+    float: left;
+    width: 75%;
+     border: 1px solid black; 
+}
+
+.left {
+    height: 650px;
+     border: 1px solid black; 
+    padding: 10px;
+}
+ .left h1 {
+    text-align: center;
+    font-size: 20px;} 
+.sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.right {
+     border: 1px solid black;
+    padding: 10px;
+}
+
+.rightside {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+     border: 1px solid black; 
+}
+
+.fakeimg img,
+.fakeimg1 img {
+    height: 300px;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.sign img {
+    width: 10%;
+
+}
+
+#unisa {
+    width: 8%;
+}
+
+
+
+button {
+    display: block;
+   
+    background-color: darkgrey;
+    width: 150px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: rgba(105, 43, 219, 0.404);
+    color: white;
+
+}
+
+.left {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.box::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:600) {
+
+    .left,
+    .left-middle {
+        width: 100%;
+    }
+
+} */

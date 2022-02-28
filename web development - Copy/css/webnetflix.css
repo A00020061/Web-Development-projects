@@ -1,0 +1,130 @@
+body{
+    background-image: url(https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png);
+    /* width: 100%;
+    height: 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section.container{
+    border: 1px solid white;
+}
+.netflix{
+    color: white;
+    float: left;
+    position: relative;
+    left: 1em;
+    top: 0.5em;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    color: rgb(255, 0, 0);
+    font-weight: 60px;
+    cursor: pointer;
+}
+
+.english{
+    float: right;
+    padding: 8px 25px;
+    position: relative;
+    top: 2em;
+    right: 5em;
+    font-size: 1.1em;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.english:hover{
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px blue;
+}
+.login{
+    float: right;
+    padding: 8px 18px;
+    position: relative;
+    top: 2em;
+    right: 3em;
+    font-size: 1.1em;
+    color: white;
+    background-color: red;
+    border: 1px solid wheat;
+    cursor: pointer;
+}
+.login:hover{
+    color: red;
+    background-color: white;
+    box-shadow: 2px 2px blue;
+}
+div.mid{
+    color: white;
+    position: absolute;
+    top: 15em;
+    left: 30em;
+    
+}
+h1{
+    font-size: 4em;
+    word-spacing: 2px;
+}
+.watch{
+    font-size: 2.5em;
+   margin-left: 1em;
+    color: wheat;
+}
+.watch span{
+    color: red;
+}
+.ready{
+    font-size: 1.7em;
+    margin-left: -2em;
+    margin-top: 7px;
+    color: rgb(245, 222, 179);
+}
+input{
+    padding: 15px 140px;
+    margin-left: -9em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+}
+button{
+    padding: 15px 70px;
+    background-color: red;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+@media screen and (max-width: 940px) and (min-width: 621px) {
+    .mid h1{
+        font-size: 3em;
+    }
+    div.mid{
+        left: 15em;
+        position: absolute;
+    } 
+    .watch{
+        font-size: 1.7em;
+    }
+    .ready{
+        font-size: 1.4em;
+        margin-top: 5px;
+    }
+    input{
+        padding: 10px 50px;
+        margin-left: -5em;
+        font-size: 1.2em;
+
+    }
+    button{
+        padding: 10px 50px;
+        font-size: 1.2em;
+
+    }
+}

@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.checkmargin{
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    background-color: rgb(195, 223, 224);
+}
+
+.information_wraper{
+    /* border: 1px solid yellow; */
+    width: 33%;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 10px;
+
+}
+img{
+    background-image: url(https://www.sa.gov.au/__data/assets/image/0005/682718/Test-QR-code.jpg);
+    background-position: center;
+    /* border: 1px solid blue; */
+    /* object-fit: cover;
+    object-position: center;
+    aspect-ratio: .1/.1;
+    background: linear-gradient(rgba(0,0,0,0.5)); */
+}
+.detail_wraper{
+     /* border: 1px solid black; */
+}
+.barcodegenerator{
+    /* border: 2px solid blue; */
+    /* margin: 0 auto; */
+    /* display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;   */
+    background-image: url(https://www.sa.gov.au/__data/assets/image/0005/682718/Test-QR-code.jpg);
+    background-position: center;
+    /* background-color: blue;   */
+    inset: 1;
+}
+.barcodedetails_wraper{
+    /* border: 1px solid blue; */
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .5px;
+    
+}
