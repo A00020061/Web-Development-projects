@@ -268,3 +268,133 @@
 // console.log(a);
 // console.log(b);
 
+// const marks = [10,12,1,45,65,85,36,21,452]
+// function check(element){
+//     if(marks.indexOf(element)!==1){
+//         return 'this is true and we find it'
+//     }else{
+//         return 'this is not true :)'
+//     }
+// }
+// let res = check(45);
+// // console.log(res);
+// const characters = [
+//     {
+//         name: 'Luke Skywalker',
+//         height: 172,
+//         mass: 77,
+//         eye_color: 'blue',
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Darth Vader',
+//         height: 202,
+//         mass: 136,
+//         eye_color: 'yellow',
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Leia Organa',
+//         height: 150,
+//         mass: 49,
+//         eye_color: 'brown',
+//         gender: 'female',
+//     },
+//     {
+//         name: 'Anakin Skywalker',
+//         height: 188,
+//         mass: 84,
+//         eye_color: 'blue',
+//         gender: 'male',
+//     },
+// ];
+// // let res = characters.filter((character) =>character.mass>=120);// this is for getting mass above 120.
+// // let res = characters.filter((character) => character.height <=200); //this is for getting height less than 200
+// // let res = characters.filter((character) => character.gender === 'female')
+// let res = characters.filter((character) => character.name ==='Leia Organa')
+// console.log(res);
+
+// let score = [1,2,5,6,9,80,4,1,56,36]
+// let res = score.find(88);
+// console.log(res);
+
+// let res = score.toString();
+// let a = typeof(res);
+// let b = Array.isArray(score);
+// console.log(b);
+// console.log(a);
+
+// const marks = [{
+//     name: 'sandeep',
+//     job: 'accountant'
+// },{
+//     name: 'rahul',
+//     job: 'supervisor'
+// },{
+//     name: 'karan',
+//     job: 'engineer'
+// },{
+//     name: 'kiran',
+//     job: 'engineer'
+// }];
+// const res = marks.push((check) =>{
+//     this.name= check.name,
+//     this.job = check.job
+// });
+// marks.check = {name: 'vishal', job: 'painter'};
+// let eco = marks.pop();
+// console.log(marks.check);
+// console.loeco)
+
+// function check(){
+//     this.name = 'sandeep',
+//     this.job = 'engineer',
+//     this.pay = '$20000',
+//     this.project = 'bridge_construction'
+// };
+// check.prototype.age = 50;
+// check.prototype = {job:'carpanter'}
+// check.prototype.fullname = function (){
+//     return this.name + ' ' + this.job;
+// }
+// const res = new check();
+// console.log(res.fullname());
+// console.log(check.prototype)
+
+
+// function check(name,id,job,salary,status){
+//     this.name = name,
+//     this.id = id,
+//     this.job = job,
+//     this.salary = salary,
+//     this.status = status};
+// let res = new check('karan', 1425, 'engineer', '$25000', 'single');
+// check.prototype={name:'rahul'}
+// console.log(res);
+// console.log(check.prototype)
+
+var library = [ 
+    {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        readingStatus: false
+    }];
+    // let res = library.filter((what) => what.title ==='Steve Jobs');
+    // console.log(typeof(res));
+    for (let i=0; i<library.length; i++){
+        let book = library[i].title + ' ' + ' written by ' + library[i].author;
+        if(library[i].readingStatus){
+            console.log('Already read ' + book);
+        }else{
+        console.log('Pending reading ' + book)};
+    }
