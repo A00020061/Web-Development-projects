@@ -223,3 +223,53 @@ let a = ['hello world how are you and what are you doing in this world','what th
 
 
 console.log(a.reverse());
+// let a = ['hello world how are you and what are you doing in this world','what the hell bro'];
+// console.log(a.reverse());
+// const employees= [{
+//     name: 'Sandeep Kumar',
+//     Id: 307477,
+//     Role: 'admin'
+// },{
+//     name: 'Ankit kumar',
+//     Id: 307478,
+//     Role: 'supervisor'
+// },{
+//     name: 'Rahul sharma',
+//     Id: 307479,
+//     Role: 'Management'
+// }];
+// function searchlist(arr, qurary){
+//     function check(element){
+//         return element.toLowerCase().indexOf(qurary.toLowerCase()!==-1)
+//     }
+//     return arr.filter(check);
+// const marks = [12,45,65,25,1,56,02,.2,65,98,78];
+// function ration(element){
+//     return element*element;
+// }
+// let res = marks.map(ration);
+// console.log(res);
+
+
+function employees(){
+    this.name = 'sandeep kumar'
+    this.id = 307477;
+    this.role = 'admin'
+    this.pay = '$25000'
+};
+employees.prototype.day = 'thursday';
+const check = new employees();
+employees.prototype = {day: 'friday'}
+const check1 = new employees()
+console.log(check.day);
+console.log(check1.day)
+
+
+// function employees(name,id,role,pay){
+//     this.name = name
+//     this.id = id
+//     this.role = role
+//     this.pay = pay
+// };
+// const check = new employees('sandeep kumar', 23256, 'admin', '$20000');
+// console.log(check.id);

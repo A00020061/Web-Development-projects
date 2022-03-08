@@ -63,9 +63,90 @@
 // document.getElementById('head6').setAttribute('style','color:pink; font-size: 2rem;');
 // document.getElementById('giveinput').setAttribute('style','padding: .5rem; width: 10rem');
 
+
 var n = 2;
 function multipleFun (num){
     var ans = num * num;
     return ans;
 var square2 = multipleFun(n);
 }
+
+// const student = {              //object literal 
+//     Name: 'Rahul Sharma',
+//     Age: 25,
+//     Course: 'IT',
+//     Year: 'Final',
+//     Intenship: 'No',
+//     get getname(){
+//         return this.Name;
+//     }
+// };
+// console.log(student.getname);
+
+
+// function Person(){    //construction object
+//     this.Name = 'Sandeep Kumar',
+//     this.Course = 'IT',
+//     this.Age = 25,
+//     this.Year = 'Final',
+    
+// };
+// const student = new Person();
+// console.log(Person.getName);
+
+
+// function Person(Name, Age, Course, Year, Fees){
+//     this.name = Name,
+//     this.age = Age,
+//     this.course = Course,
+//     this.year = Year,
+//     this.fees = Fees
+// }
+// const student = new Person('Sandeep kumar', 25, 'IT', 'Final', '$25000')
+// const student1 = new Person('Ankit Sharma', 24, 'Business', 'Final', '$30000')
+// Person.prototype = {fees:$32000}
+// console.log(student.fees);
+// console.log(student1.fees)
+
+
+const Sandeep_kumar = {
+    _Available_meeting_time: [11,2,5],
+    Accepted_purpose: 'any',
+    Pending_meeting:[],
+    Accepted_meeting:[],
+    Decline_meeting:[],
+    _feedback: '',
+
+    get getmeeting_time(){
+        return this._Available_meeting_time;
+    },
+    get getfeedBack(){
+        return this._feedback;
+    },
+    // set setmeeting_time(time){
+    //     if(this._Available_meeting_time.indexOf(time)!==-1){
+    //         this.Pending_meeting.push(time);
+    //         this._feedback = 'Your Appointment has been recorded and will be reviewed by the Sandeep-kumar';
+    //     }else{
+    //         this._feedback='Your Appointment has been cancelled'
+    //     }
+    // }
+    // set setmeeting_time(meeting){
+    //     const{name,time,purpose} = meeting;
+    //     if(this._Available_meeting_time.indexOf(time)!==-1 && this.Accepted_purpose ==='any'){
+    //         this.Pending_meeting.push(time);
+    //         this._feedback = 'Your Appointment has been booked and would be called to you soon';
+    //     }else if(this.Accepted_meeting === purpose.toLowerCase()){
+    //         this.Pending_meeting.push(time);
+    //         this._feedback = `you appointment time has been recorded and will call you back`;
+    //     }else{
+    //         this._feedback = `Sorry, we can't take move with you appointment time.`
+    //     }
+    // }
+};
+// const newClientmeeting = {name: 'ankit', time: 12, purpose: 'fun'};
+// Sandeep_kumar.setmeeting_time = newClientmeeting;
+// console.log(Sandeep_kumar._feedback);
+// Sandeep_kumar.setmeeting_time = 13;
+// console.log(Sandeep_kumar._feedback);
+

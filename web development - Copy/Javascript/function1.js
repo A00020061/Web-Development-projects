@@ -268,6 +268,7 @@
 // console.log(a);
 // console.log(b);
 
+
 // const marks = [10,12,1,45,65,85,36,21,452]
 // function check(element){
 //     if(marks.indexOf(element)!==1){
@@ -398,3 +399,100 @@ var library = [
         }else{
         console.log('Pending reading ' + book)};
     }
+// var SandeepKumar = {
+//     firstName: 'Sandeep',
+//     lastName: 'Kumar',
+//     age: 26,
+//     profession: 'Web development'
+// }
+// console.log(SandeepKumar.age);
+// SandeepKumar.profession = 'Software Developer';
+// console.log(SandeepKumar.profession);
+// SandeepKumar.SureName = 'Parjapat';
+// console.log(SandeepKumar.SureName);
+// delete SandeepKumar.age;
+// console.log(SandeepKumar.length);
+
+// var bookDetails = [{
+//     Name: 'Ronald Trumph',
+//     Title: 'Just Do it',
+//     ReadingStatus: true
+// },
+// {
+//     Name: 'David Warner',
+//     Title: 'Dream True',
+//     ReadingStatus: true
+// },{
+//     Name: 'John White',
+//     Title: 'Relex Body',
+//     ReadingStatus: false
+// }];
+// for (let i=0; i<bookDetails.length; i++){
+//     var book = "'" + bookDetails[i].Title + "'" + ' by ' + bookDetails[i].Name +"."
+//     if(bookDetails[i].ReadingStatus){
+//         console.log('Thanks' + book);
+//     }else{
+//         console.log('You need to' + book);
+//     }
+// };
+// const programming = {
+//     languages: ["JavaScript", "Python", "Ruby"],
+//     isChallenging: true,
+//     Name: 'Sandeep',
+//     lastName: function(){
+//         let SureName = 'Kumar';
+//         console.log('My Name is' + ' ' + this.Name + ' ' + SureName);},
+//     address: function(){
+//         let fullAddress = 'Australia,Adelaide';
+//         console.log('This is my full address' + ' ' + fullAddress);
+//     }
+// };
+// programming.lastName();
+// programming.address();
+// function Person(){
+//     this.firstName = 'Sandeep',
+//     this.lastName = 'Kumar',
+//     this.email = 'sandeepkumar4405@gmail.com',
+//     this.age = 26
+//     this.great = function(){console.log('Hello, Sandeep Kumar')}
+// };
+// const person  = new Person();//new is used for moving constructor function to object.
+// person.great();
+// function Person(name, age, gender, profession){
+//     this.name = name,
+//     this.age = age,
+//     this.gender = gender,
+//     this.profession = profession
+// }
+// const person1 = new Person('Sandeep', 26, 'Male', 'Web-Develper');
+// const person2 = new Person('Ankit', 25, 'Male', 'Software-Engineer')
+// Person.prototype.marriage = 'single';
+// console.log(person1.gender)
+// console.log(person2.profession)
+
+// const student = {
+//     firstName: 'Sandeep',
+//     lastName: 'Kumar',
+//     get getname(){
+//         return this.firstName;
+//     },
+//     set setfirstname(changename){
+//         this.firstName = changename;
+//     }
+// };
+// student.setfirstname = 'ankit';
+// console.log(student.firstName);
+// console.log(student.getname);
+// console.log(student.firstName);
+
+function University() {
+    this.Name ='Torrens',
+    this.location =  'Adelaide',
+    this.level = 'first',
+    this.courses = 'complete'
+};
+University.prototype.students = '2500';
+const university = new University;
+console.log(university);
+console.log(university.students)
+console.log(University.prototype);
