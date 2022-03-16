@@ -218,11 +218,11 @@
 // }
 // console.log(result +' with '+ mx +' Times');
 
-let a = ['hello world how are you and what are you doing in this world','what the hell bro'];
+// let a = ['hello world how are you and what are you doing in this world','what the hell bro'];
 
 
 
-console.log(a.reverse());
+// console.log(a.reverse());
 // let a = ['hello world how are you and what are you doing in this world','what the hell bro'];
 // console.log(a.reverse());
 // const employees= [{
@@ -251,18 +251,18 @@ console.log(a.reverse());
 // console.log(res);
 
 
-function employees(){
-    this.name = 'sandeep kumar'
-    this.id = 307477;
-    this.role = 'admin'
-    this.pay = '$25000'
-};
-employees.prototype.day = 'thursday';
-const check = new employees();
-employees.prototype = {day: 'friday'}
-const check1 = new employees()
-console.log(check.day);
-console.log(check1.day)
+// function employees(){
+//     this.name = 'sandeep kumar'
+//     this.id = 307477;
+//     this.role = 'admin'
+//     this.pay = '$25000'
+// };
+// employees.prototype.day = 'thursday';
+// const check = new employees();
+// employees.prototype = {day: 'friday'}
+// const check1 = new employees()
+// console.log(check.day);
+// console.log(check1.day)
 
 
 // function employees(name,id,role,pay){
@@ -273,3 +273,84 @@ console.log(check1.day)
 // };
 // const check = new employees('sandeep kumar', 23256, 'admin', '$20000');
 // console.log(check.id);
+
+// function checkme(num){
+//     var total = 0;
+//     for (let i = 0; i<=num; i++){
+//         total += i;
+//     }
+//     return total;
+// }
+// var sss = checkme(5);
+// console.log(sss);
+// //////////////
+// const what = [12,45,84,1,4,36,52];
+// what.sort((a,b) => a-b);
+// console.log(what);
+//////////////
+
+// function checkfactorial(num) {
+//     if(num == 0 || num ==1){
+//         return 1
+//     }else{
+//         for(var i=num-1; i>=1; i--){
+//             num=num*i
+//         }
+//     }return num; 
+// }
+// let wed = checkfactorial(5);
+// console.log(wed);
+////////////////
+
+// const www = [1,2,5,6, -5,9,8,7,4,1,5];
+// function maxnum(www){
+//     let maxn = www[0];
+//     let minn = www[0];
+//     for (let i=0; i<www.length; i++){
+//         if(www[i]>maxn){
+//             maxn = www[i];   
+//         }else if (www[i]<maxn){
+//             minn = www[i]
+//         };
+//     }return (maxn + ' and ' + minn);
+
+// }
+// let waw = maxnum([5,4,2,5,3,6,5,1,4,200,201]);
+// console.log(waw);
+
+// var aaa = Math.max(...www);
+// var bbb = Math.min(...www)
+// console.log(aaa);
+// console.log(bbb);
+
+// let aa = [1,56,3,2,475,98,657,458];
+// function check(arr){
+//     if(aa.includes(475)){
+//         return aa.indexOf(475);
+//     }else{
+//         return (475 + ' Does not exist')
+//     }
+// }
+// let ee = check([1,56,3,2,475,98,657,458]);
+// console.log(ee);
+
+// var z = function(n){
+//     let total = 1;
+//     for (let i = 1; i++){
+//         total *= i;
+//         if(total==n){
+//             return total
+//         }else{
+
+//         }
+//     }
+// }
+let a = function(){
+    let total = 1;
+    for(i=1; i++;){
+        total *= i;
+    }return total;
+}
+console.log(a());
+
+
