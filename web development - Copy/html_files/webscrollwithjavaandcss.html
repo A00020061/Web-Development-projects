@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/webscrollwithjavaandcss.css">
+    <title>Scroll down</title>
+    <link rel="icon"
+        href="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+</head>
+
+<body>
+    <header class="nav_header">
+        <nav class="navbar">
+            <div class="brand_name">
+                <strong>Sandy</strong>
+            </div>
+            <ul class="unordered_list">
+                <li><a class="linke-home" href="#home">Home</a></li>
+                <li><a class="linke-service" href="#service">Service</a></li>
+                <li><a class="linke-about" href="#about">About</a></li>
+                <li><a class="linke-contact" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main_heading">
+        <section class="heading_area home"> <p> Home <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum omnis
+            corrupti, deleniti molestias ratione animi quis inventore qui. Officia, totam facilis itaque earum voluptate
+            fuga? Sunt, ipsa nisi? Fugit in corporis eligendi hic ipsum ducimus, sint a quis voluptatem? Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Magnam laboriosam laudantium dignissimos! Accusantium, aliquam!
+            Aut voluptatum magni est cumque maiores voluptate ipsam quam dicta delectus perspiciatis aperiam incidunt,
+            ea a, esse sint nostrum soluta ipsum ducimus assumenda accusamus? Molestiae, accusamus! <br>
+            <input type="submit" value="submit" id="submit">
+
+        </p>
+</section>
+        <section class="heading_area service"> <p> Service <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum omnis
+            corrupti, deleniti molestias ratione animi quis inventore qui. Officia, totam facilis itaque earum voluptate
+            fuga? Sunt, ipsa nisi? Fugit in corporis eligendi hic ipsum ducimus, sint a quis voluptatem? Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Magnam laboriosam laudantium dignissimos! Accusantium, aliquam!
+            Aut voluptatum magni est cumque maiores voluptate ipsam quam dicta delectus perspiciatis aperiam incidunt,
+            ea a, esse sint nostrum soluta ipsum ducimus assumenda accusamus? Molestiae, accusamus!
+
+        </p>
+</section>
+        <section class="heading_area about"> <p> About <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum omnis
+            corrupti, deleniti molestias ratione animi quis inventore qui. Officia, totam facilis itaque earum voluptate
+            fuga? Sunt, ipsa nisi? Fugit in corporis eligendi hic ipsum ducimus, sint a quis voluptatem? Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Magnam laboriosam laudantium dignissimos! Accusantium, aliquam!
+            Aut voluptatum magni est cumque maiores voluptate ipsam quam dicta delectus perspiciatis aperiam incidunt,
+            ea a, esse sint nostrum soluta ipsum ducimus assumenda accusamus? Molestiae, accusamus!
+
+        </p>
+</section>
+        <section class="heading_area contact"> <p> contact <br> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum omnis
+            corrupti, deleniti molestias ratione animi quis inventore qui. Officia, totam facilis itaque earum voluptate
+            fuga? Sunt, ipsa nisi? Fugit in corporis eligendi hic ipsum ducimus, sint a quis voluptatem? Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Magnam laboriosam laudantium dignissimos! Accusantium, aliquam!
+            Aut voluptatum magni est cumque maiores voluptate ipsam quam dicta delectus perspiciatis aperiam incidunt,
+            ea a, esse sint nostrum soluta ipsum ducimus assumenda accusamus? Molestiae, accusamus!
+
+        </p>
+</section>
+        <section class="heading_area extra"> <p> extra <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum omnis
+            corrupti, deleniti molestias ratione animi quis inventore qui. Officia, totam facilis itaque earum voluptate
+            fuga? Sunt, ipsa nisi? Fugit in corporis eligendi hic ipsum ducimus, sint a quis voluptatem? Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Magnam laboriosam laudantium dignissimos! Accusantium, aliquam!
+            Aut voluptatum magni est cumque maiores voluptate ipsam quam dicta delectus perspiciatis aperiam incidunt,
+            ea a, esse sint nostrum soluta ipsum ducimus assumenda accusamus? Molestiae, accusamus!
+
+        </p>
+</section>
+        
+    </main>
+    <script>
+        const scrolldown = document.querySelector('.home');
+        const scrolldown1 = document.querySelector('.service');
+        const scrolldown2 = document.querySelector('.about');
+        const scrolldown3 = document.querySelector('.contact');
+        document.querySelector('.linke-home').addEventListener('click',()=>{
+            scrolldown.scrollIntoView({behavior: "smooth"});
+        });
+        document.querySelector('.linke-service').addEventListener('click',()=>{
+            scrolldown1.scrollIntoView({behavior: "smooth"});
+        });
+        document.querySelector('.linke-about').addEventListener('click',()=>{
+            scrolldown2.scrollIntoView({behavior: "smooth"});
+        });
+        document.querySelector('.linke-contact').addEventListener('click',()=>{
+            scrolldown3.scrollIntoView({behavior: "smooth"});
+        });
+
+        document.querySelector('#submit').onclick=function(){
+            alert('are you sure about this!')
+            scrolldown.style.backgroundcolor = 'red';
+        }
+
+    </script>
+
+</body>
+
+</html>
