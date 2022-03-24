@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Zig Zag Layout Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(241, 241, 241);
+            padding: 10px;
+        }
+
+        /* .left1,
+        .leftside,
+        .rightside {
+            border: 1px solid black;
+        } */
+
+        .leftside66, .rightside66 {
+            width: 66%;
+            float: left;
+            padding: 20px;
+        }
+        .leftside33,.rightside33{
+            width: 33%;
+            float: left;
+            padding: 20px;
+        }
+
+
+        .leftside66 h1,
+        .rightside66 h1 {
+            font-size: 64px;
+
+        }
+        #pixels {
+            font-size: 56px;
+            color: red;
+        }
+
+        
+        #why{
+            font-size: 56px;
+            color:MediumSeaGreen;
+        }
+
+        #photo,
+        #revolution {
+            font-size: 40px;
+        }
+
+        #app {
+            background-color: #04AA6D;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            color: white;
+        }
+        #read {
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            border: none;
+            padding: 15px;
+        }
+        img{
+            width: 300px;
+            height: 400px;
+        }
+        .left1::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+       @media screen and (max-width: 900px){
+           .leftside66, rightside66{
+               width: 100%;
+              text-align: center;
+           }
+           
+       }
+       @media screen and (max-width: 600px){
+           .leftside33,.rightside33{
+               width: 100%;
+               text-align: center;
+           }
+           
+       }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <header>
+            <h1>Responsive Zig Zag website for International Students</h1>
+            <p>This webpage lead you your best informatic channels where you can catch more informative ideas for your
+                study's guide.</p>
+        </header>
+        <div class="left1">
+            <div class="leftside66">
+                <h1>The App</h1>
+                <span id="why">Why buy it?</span>
+                <p style="width: 90%;"><span id="photo">Take photo like a pro.</span> You should buy this app because lorem ipsum
+                    consecteture adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim
+                    and minim veniam, uwuis nostrud exercitation allamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</p>
+                <button id="app">Download Application</button>
+            </div>
+            <div class="leftside33">
+                <img src="https://www.w3schools.com/w3images/img_app.jpg" alt="">
+            </div>
+        </div>
+        <div class="left1" style="background-color: rgb(231, 233, 235);">
+            <div class="rightside33">
+                <img src="https://www.w3schools.com/w3images/app5.jpg" alt="">
+            </div>
+            <div class="rightside66">
+                <h1>Clarity</h1>
+                <p><span id="pixels">Pixels, who?</span></p>
+                <p style="width: 80%;"><span id="revolution">A revolution in resolution.</span> Sharp and clear photos with the world's
+                    best photo enginem incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation allamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiiat nulla pariatur.</p>
+                <button id="read">Read More</button>
+
+            </div>
+        </div>
+        <div class="left1">
+            <div class="leftside66">
+                <h1>The App</h1>
+                <span id="why">Why buy it?</span>
+                <p style="width: 90%;"><span id="photo">Take photo like a pro.</span> You should buy this app because lorem ipsum
+                    consecteture adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim
+                    and minim veniam, uwuis nostrud exercitation allamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</p>
+                <button id="app">Download Application</button>
+            </div>
+            <div class="leftside33">
+                <img src="https://www.w3schools.com/w3images/img_app.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
