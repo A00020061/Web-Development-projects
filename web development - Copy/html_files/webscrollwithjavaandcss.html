@@ -24,36 +24,70 @@
                 <li><a class="linke-contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="navbar_content">
-            <h1 id="navbar_content_h1">WeLcome To Adelaide :)</h1>
-            <p id="navbar_content_para">Adelaide is the Beautiful and living city in the World!</p>
-            
-        </div>
         <div class="video_section">
-            <video id="navbar_video_background" autoplay loop muted src="https://player.vimeo.com/external/562642552.sd.mp4?s=421c7fdfada40513bae656d1e84cf20ada914f08&profile_id=165&oauth2_token_id=57447761"></video>
-            
+            <video id="navbar_video_background" autoplay loop muted poster="../web_images/mottu1.jpg">
+                <source
+                    src="https://player.vimeo.com/external/562642552.sd.mp4?s=421c7fdfada40513bae656d1e84cf20ada914f08&profile_id=165&oauth2_token_id=57447761">
+            </video>
+            <div class="video_content">
+                <h1 class="video_heading">
+                    Welcome to Adelaide city :)
+                </h1>
+                <p class="video_para">Adelaide is the most beautiful and peaceful city in the world :)</p>
+                <button id="btn_adelaide" ><a href="https://southaustralia.com/destinations/adelaide" target="_blank">Explore More</a></button>
+            </div>
+
         </div>
     </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim voluptatum suscipit necessitatibus
+            doloribus alias delectus voluptate rerum iure quisquam repellendus magnam unde eos earum, magni nostrum
+            perspiciatis quo quasi numquam dolorem quos cumque qui. Nesciunt culpa debitis nostrum nemo obcaecati
+            asperiores porro ab quaerat quasi voluptates possimus sint reprehenderit ipsum sapiente, omnis repudiandae
+            minima ratione ipsam. Rem quisquam possimus optio. Natus deleniti facere laboriosam numquam non deserunt,
+            sed officia corporis repudiandae voluptate perferendis quis autem animi suscipit distinctio minus nesciunt
+            ad. Temporibus maxime incidunt esse iusto deserunt voluptate voluptatum, ad vero, adipisci commodi quod!
+            Deserunt ullam vitae tenetur laborum.</p>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script>
         const scrolldown = document.querySelector('.home');
         const scrolldown1 = document.querySelector('.service');
         const scrolldown2 = document.querySelector('.about');
         const scrolldown3 = document.querySelector('.contact');
-        document.querySelector('.linke-home').addEventListener('click',()=>{
-            scrolldown.scrollIntoView({behavior: "smooth"});
+        document.querySelector('.linke-home').addEventListener('click', () => {
+            scrolldown.scrollIntoView({ behavior: "smooth" });
         });
-        document.querySelector('.linke-service').addEventListener('click',()=>{
-            scrolldown1.scrollIntoView({behavior: "smooth"});
+        document.querySelector('.linke-service').addEventListener('click', () => {
+            scrolldown1.scrollIntoView({ behavior: "smooth" });
         });
-        document.querySelector('.linke-about').addEventListener('click',()=>{
-            scrolldown2.scrollIntoView({behavior: "smooth"});
+        document.querySelector('.linke-about').addEventListener('click', () => {
+            scrolldown2.scrollIntoView({ behavior: "smooth" });
         });
-        document.querySelector('.linke-contact').addEventListener('click',()=>{
-            scrolldown3.scrollIntoView({behavior: "smooth"});
+        document.querySelector('.linke-contact').addEventListener('click', () => {
+            scrolldown3.scrollIntoView({ behavior: "smooth" });
         });
 
-        document.querySelector('#submit').onclick=function(){
+        document.querySelector('#submit').onclick = function () {
             alert('are you sure about this!')
             scrolldown.style.backgroundcolor = 'red';
         }
