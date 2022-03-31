@@ -1,0 +1,496 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Bhaijaan+2&family=Flamenco&family=Gwendolyn:wght@700&family=Inconsolata:wght@200&family=Lato:wght@300&family=Lobster&family=Playfair+Display:wght@900&family=Rajdhani&family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary_color: #95a5a6;
+    --secondary_color: #34495e;
+    --header_color: #6c5ce7;
+    --optional_color: #2d3436;
+    --main_color: white;
+}
+html,body{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+image{
+    width: 100%;
+    height: 100%;
+}
+/* ------------------navbar section--------
+---------------------------------------- */
+.nav_header{
+    /* border: 1px solid black; */
+    position: relative;
+    /* border: 5px solid blue; */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.navbar{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    text-align: center;
+    min-width: 100%;
+    align-items: center;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 2rem;
+}
+.navbar .unordered_list{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-right: 3rem;
+    /* border: 1px solid black; */
+}
+.unordered_list li{
+    list-style: none;
+    /* border: 1px solid white; */
+    padding: .7rem .2rem;
+}
+.unordered_list li a{
+    text-decoration: none;
+   
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  
+}
+.brand_name{
+    margin-left: 2rem;
+    border: 1px solid #8e44ad;
+    padding: 1rem;
+    box-shadow: 0 0 1px 3px #22a6b3;
+    border-radius: 10% 50%;
+}
+#logo{
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* ---------------------------navbar_content with hover effect----------------
+--------------------------------------------------------- */
+
+
+
+/* 
+-------------------video_background_section_---------
+---------------------------------------------------- */
+.video_section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    overflow: hidden;
+}
+#navbar_video_background{
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    justify-content: top;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.video_content{
+    /* border: 1px solid blue; */
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    text-align: center;
+    width: 50%;
+}
+.video_heading{
+    color: rgb(47, 54, 64, .8);
+    font-size: 6rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.video_para{
+    font-size: 2.5rem;
+    color: rgb(245, 222, 179, .7);
+}
+/* ------------------------button_adelaide----------
+------------------------------------------------- */
+
+#btn_adelaide{
+    /* border: 1px solid black; */
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: rgb(48, 51, 107, .7);
+    border-radius: 10px;
+}
+#btn_adelaide a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #22a6b3;
+    font-weight: 600;
+}
+
+@media only screen and (max-width:400px){
+    .brand_name{
+        display: block;
+        border: 2px solid blue;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: .5rem;
+        align-items: center;
+    }
+   
+    .unordered_list li{
+        display: block;
+        width: 100%;
+        gap: 2rem;
+      
+    }
+    .unordered_list{
+        display: block;
+        gap: 2rem;
+    }
+}
+@media (min-aspect-ratio: 16/9){
+    #navbar_video_background{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ration: 16/9){
+    #navbar_video_background{
+        width: auto;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 767px){
+    #navbar_video_background{
+        display: none;
+    }
+    body{
+        background: url(https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+}
+/* -------------------main_heading_section----------
+------------------------------------------------- */
+.main_center_part{
+    background-color: white;
+   padding: 4rem;
+}
+main{
+    display: grid;
+    grid-template-areas: 'section1 section2 section2'
+    'section1 section3 section3';
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    filter: blur(.5px);
+    
+    /* border: 2px solid black; */
+}
+/* ------------main_heading-----------
+----------------------------------- */
+.main_content_section{
+    border: 1px solid black;
+    font-size: 2rem;
+    padding: 3rem 0 1rem 1rem;
+    text-align: center;
+    position: relative;
+}
+.section1{
+    grid-area: section1;
+    padding-top: 6rem;
+    box-shadow: .5px .5px 6px 1px #95a5a6;
+}
+.main_heading{
+    font-size: 3rem;
+}
+.first, .second{
+    padding-bottom: 4rem;
+}
+.paragraph{
+    padding: 0 1.5rem;
+    line-height: 2.5rem;
+}
+.paragraph2{
+    padding: 0 2rem;
+    line-height: 2.5rem;
+}
+.btn_little_more_explore{
+    /* border: 1px solid black; */
+    padding: 1.2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+.btn_little_more_explore a{
+    text-decoration: none;
+}
+.main_heading_para{
+    font-size: 2rem;
+}
+.section2{
+    grid-area: section2; 
+    box-shadow: .5px .5px 6px 1px #95a5a6;
+}
+.section3{
+    grid-area: section3;
+    background-image: url(https://southaustralia.com/media/a4xgrap0/alittlemore_pinklakes_heroimagery_1920x800-crop2.jpg?anchor=center&mode=crop&quality=80&width=1920&height=600&rnd=132768542037730000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    box-shadow: .5px .5px 6px 1px #95a5a6;
+}
+.main_content_background_image{
+    font-size: 2rem;
+    color: rgb(255, 255, 255, .5);
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    filter: blur(.3px);
+}
+/* --------------------main_travel_destination-----------
+------------------------------------------------------ */
+.main_travel_destination{
+    /* border: 3px solid black; */
+    text-align: center;
+    position: relative;
+}
+/* -------------------------- */
+.main_section_heading{
+    /* border: 1px solid blue; */
+    width: 60%;
+    margin: 5% auto;
+}
+.main_travel_idea{
+    font-size: 2.6rem;
+    color: #34495e;
+}
+strong{
+    font-size: 4rem;
+    font-family: 'Oswald', sans-serif;
+}
+.main_heading_paragraph{
+    font-size: 1.8rem;
+    width: 75%;
+    margin: 3rem auto;
+    font-family: 'Roboto', sans-serif;
+    color: #34495e;
+}
+/* --------------------------- */
+image{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.content_image_section{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    overflow-x: auto;
+    text-align: center;
+    width: 90%;
+    grid-gap: 3rem;
+    margin: 7% auto;
+    /* overflow: auto; */
+    position: relative;
+    animation: slider 20s infinite;
+
+}
+@keyframes slider{
+    0%{
+        margin-left: 0;
+    }
+    20%{
+        margin-left: -20%;
+    }
+    40%{
+        margin-left: -40%;
+    }
+    60%{
+        margin-left: -60%;
+    }
+}
+.content_image_section::-webkit-scrollbar{
+    overflow: hidden;
+}
+.one,.two,.three,.four,.five,.six,.seven,.eight{
+    min-height: 30vh;
+    background-position: center;
+    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    box-shadow: .5px .5px 6px 5px #95a5a6;
+    place-content: stretch;
+    border-radius: 10px;
+
+}
+
+.one{
+    background-image: url(https://southaustralia.com/media/kucils4m/kilsby-sinkhole-carousel-a-little-more.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.two{
+    background-image: url(https://southaustralia.com/media/q5zfgiug/remarkable-rocks-carousel-a-little-more.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.three{
+    background-image: url(https://southaustralia.com/media/4rilnpsw/arkaroola-ridge-top-tour-carousel-a-little-more.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.four{
+    background-image: url(https://southaustralia.com/media/hvvfx3oy/sevenhill_clarevalley_1052x680.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.five{
+    background-image: url(https://southaustralia.com/media/sr4ervgc/shark-cage-diving-carousel-a-little-more.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.six{
+    background-image: url(https://southaustralia.com/media/xg2patna/darenberg-cube-carousel-a-little-more.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.seven{
+    background-image: url(https://southaustralia.com/media/upmjkmyf/maxwell-wines-lime-cave-fleurieu-peninsula-teaser.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.eight{
+    background-image: url(https://southaustralia.com/media/ejed5dn1/kangaroo-island.jpg?width=540&height=350&mode=crop&quality=80);
+}
+.coast_destination {
+    position: relative;
+    
+}
+
+.route{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    filter: blur(.3px);
+}
+.btn_btn_btn{
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%);
+    padding: 1rem 1.8rem;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    box-shadow: 0px 0px 1px .5px #95a5a6;
+}
+.btn_btn_btn:hover{
+    background-color: white;
+    color: black;
+    opacity: .8;
+}
+
+/* ----------------------add_image_section-----------
+--------------------------------------------------  */
+.add_image_section{
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+    /* border: 2px solid blue; */
+}
+.image_scrollbar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border: 3px solid green;
+}
+.image_scrollbar img{
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.image_overlap_content{
+    position: absolute;
+    top: 67%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid black; */
+    background-color: rgb(0, 0, 0, .6);
+    color: white;
+    width: 40%;
+    text-align: center;
+    align-items: center;
+    min-height: 40%;
+    height: auto;
+
+}
+.image_overlap_content .first_score{
+    font-size: 3.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 2rem;
+    border: 1px solid white;
+    width: 80%;
+    margin: 4rem auto;
+    box-shadow: 0px 0px 1px .5px #95a5a6;
+}
+.image_overlap_content .first_para_score{
+    font-size: 2rem;
+    padding: 2rem;
+    width: 80%;
+    border: 1px solid white;
+    margin: 4rem auto;
+    margin-bottom: 5rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 0px 1px .5px #95a5a6;
+
+}
+.image_overlap_content #newsletter{
+    border: 1px solid wheat;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 1px .5px #95a5a6;
+}
+/* ------------------btn-backward-forward-------
+---------------------------------------------- */
+.btn_back_btn{
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+}
+.btn_forward_btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: inline-block;
+}
+.btn_backward{
+    font-size: 4rem;
+    
+}
+.btn_forward{
+    font-size: 4rem;
+    float: right;
+}
