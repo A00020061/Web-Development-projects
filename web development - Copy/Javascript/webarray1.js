@@ -89,13 +89,14 @@
 // do somthing different
 // --------------------
 
-let score = function(nums){
-    for(let i = 0; i<nums.length; i++){
-        if(nums[i]===0){
-            nums.splice(i,1);
-            nums.push(0);
-        }
-    }return nums
-}
-let mark = score([0,0,1]);
-console.log(mark);
+// let score = function(nums){
+//     for(let i = 0; i<nums.length; i++){
+//         if(nums[i]===0){
+//             nums.splice(i,1);
+//             nums.push(0);
+//         }
+//     }return nums
+// }
+// let mark = score([0,0,1]);
+// console.log(mark);
+// ------------------------
