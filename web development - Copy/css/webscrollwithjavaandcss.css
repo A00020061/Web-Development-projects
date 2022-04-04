@@ -499,13 +499,24 @@ image{
 }
 /* ------------footer_start--------- */
 footer{
-    border: 2px solid white;
+    
     font-size: 1.5rem;
     background-color: #111;
     display: block;
     padding: 2.777rem 0 3.333rem 0;
     opacity: 1;
     visibility: visible;
+    height: 50vh;
+    position: relative;
+}
+.footer_area{
+    /* border: 2px solid blue; */
+    position: absolute;
+    width: 100%;
+    top: 20%;
+}
+.footer_header{
+    margin-bottom: 5rem;
 }
 
 .footer_container{
@@ -514,21 +525,22 @@ footer{
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 95%;
 }
-.footer_header{
+.footer_header,.footer_footer{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
     color: white;
+    width: 100%;
 }
 .footer_logos{
     display: flex;
     align-items: center;
     margin: 0px -0.5555rem 0px -0.555rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 25%;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -543,7 +555,7 @@ footer{
     font-weight: 700;
     text-transform: uppercase;
     width: 50%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 .footer_nav_list{
     display: flex;
@@ -557,11 +569,11 @@ footer{
 .dropdown{
     list-style: none;
     padding: 1rem 1.3rem;
-    font-size: 1.35rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     cursor: pointer;
 }
 .dropdown .nav_link{
+    font-size: 1rem;
     text-decoration: none;
 }
 .dropdown .nav_link span{
@@ -571,7 +583,7 @@ footer{
 .footer_social{
     display: flex;
     width: 25%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     justify-content: flex-end;
     font-size: 2rem;
     align-items: center;
@@ -581,7 +593,7 @@ footer{
     margin: 13px;
     display: list-item;
     list-style: none;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: .5rem;
 }
 .footer_social-item a{
@@ -591,3 +603,108 @@ footer{
 }
 
 /* ------------footer_end----------- */
+
+/* ----------------footer-start----------- */
+.footer_footer{
+    color: hsla(0,0%,100%,.4);
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    margin-top: 2.5rem;
+}
+.footer_lang{
+    display: flex;
+    justify-content: flex-end;
+    order: 1;
+    align-items: center;
+    margin: .55555rem 0;
+    position: relative;
+}
+/* .hidden_file{
+    appearance: none;
+    position: absolute !important;
+    left: -9999px !important;
+    height: 1px !important;
+    width: 1px !important;
+    border-width: 0px !important;
+
+} */
+option{
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+select{
+    word-wrap: normal;
+    text-transform: none;
+}
+.footer_colophon{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    order: -1;
+}
+.footer_subnav, .footer_colophon_nav{
+    margin-top: 0;
+    width: auto;
+    /* border: 1px solid white; */
+}
+.footer_subnav_list, .footer_colophon_nav_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+li{
+    list-style: none;
+    text-align: center;
+    display: list-item;
+    /* border: 1px solid white; */
+    padding: 1rem;
+}
+.footer_subnav_list .nav_item a, .footer_colophon .footer_colophon_nav_list .nav_item a{
+    padding: 0.27777rem 0.55555rem;
+    text-decoration: none;
+    transition: color .2s cubic-bezier(.4,0,.2,1);
+    color: inherit;
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+}
+span{
+    font-size: 1.2rem;
+    font-family: intro,Helvetica,neue, sans-serif;
+}
+.footer_colophon{
+    width: 25%;
+    /* border: 2px solid white; */
+}
+.footer_colophon_nav{
+    width: 100%;
+}
+.footer_colophon_nav_list{
+    justify-content: space-between;
+    width: 90%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    /* padding: 1rem; */
+}
+.footer_subnav{
+    width: 60%;
+}
+.footer_subnav_list{
+    /* border: 1px solid blue; */
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+
+/* -----------------footer-end------------ */ 
