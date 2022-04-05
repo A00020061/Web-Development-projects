@@ -13,18 +13,18 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="brand_name">
+            <strong id="logo">Sandy</strong>
+        </div>
+        <ul class="unordered_list">
+            <li><a class="linke-home" href="https://swiperjs.com/demos#grab-cursor">Home</a></li>
+            <li><a class="linke-service" href="#service">Service</a></li>
+            <li><a class="linke-about" href="#about">About</a></li>
+            <li><a class="linke-contact" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <header class="nav_header">
-        <nav class="navbar">
-            <div class="brand_name">
-                <strong id="logo">Sandy</strong>
-            </div>
-            <ul class="unordered_list">
-                <li><a class="linke-home" href="#home">Home</a></li>
-                <li><a class="linke-service" href="#service">Service</a></li>
-                <li><a class="linke-about" href="#about">About</a></li>
-                <li><a class="linke-contact" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
         <div class="video_section">
             <video id="navbar_video_background" autoplay loop muted
                 poster="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
@@ -182,24 +182,23 @@
                 </div>
                 <div class="footer_footer">
                     <div class="footer_lang">
-                        <select name="" class="footer_lang_selector">
-                            <option value="#">Francais</option>
-                            <option value="#">English</option>
-                            <option value="#">Italiano</option>
-                        </select>
-                        <span class="jcf-select">
-                            <span class="jcf_select_text"><span>English</span></span>
-                            <span class="jcf_select_opener">::before</span>
-                        </span>
+                        <label class="dropdown col" for="lang">Language: </label>
+                        <input type="text" list="lan_list">
+                        <datalist id="lan_list">
+                            <option value="English" ></option>
+                            <option value="Hindi"></option>
+                            <option value="Deutsch"></option>
+                            <option value="Francais"></option>
+                        </datalist>
                     </div>
 
                     <nav class="footer_subnav" aria-label="Site contacts navigation">
                         <ul class="footer_subnav_list">
-                            <li class="nav_item"><a href="" class="nav_link" title="Media & Corporate"><span>Media &
+                            <li class="dropdown col"><a href="" class="nav_link" title="Media & Corporate"><span>Media &
                                         Corporate</span></a></li>
-                            <li class="nav_item"><a href="" class="nav_link" title="Trade Partners"><span>Trade
+                            <li class="dropdown col"><a href="" class="nav_link" title="Trade Partners"><span>Trade
                                         Partners</span></a></li>
-                            <li class="nav_item"><a href="" class="nav_link" title="Contact us"><span>Contact
+                            <li class="dropdown col"><a href="" class="nav_link" title="Contact us"><span>Contact
                                         us</span></a></li>
                         </ul>
                     </nav>
@@ -207,13 +206,13 @@
 
                         <nav class="footer_colophon_nav" aria-label="Site privacy navigation">
                             <ul class="footer_colophon_nav_list">
-                                <li class="nav_item">
+                                <li class="dropdown col">
                                     <a href="#" class="nav_link" title="Copyright"><span>Copyright</span></a>
                                 </li>
-                                <li class="nav_item">
+                                <li class="dropdown col">
                                     <a href="#" class="nav_link" title="Disclaimer"><span>Disclamier</span></a>
                                 </li>
-                                <li class="nav_item">
+                                <li class="dropdown col">
                                     <a href="#" class="nav_link" title="Privacy"><span>Privacy</span></a>
                                 </li>
                             </ul>
