@@ -100,3 +100,44 @@
 // let mark = score([0,0,1]);
 // console.log(mark);
 // ------------------------
+
+
+
+// -------------------reverse function  with array------------
+// let first = function(s){
+//     return s.reverse();
+// }
+// let sec= first([1,2,3,4,5,6]);
+// console.log(sec);
+// -------------------------------------
+
+// ---------------fobinicci number------------
+// let fib = function(n){
+//     let n1 = 0, n2 = 1, nextterm;
+//     for(let i = 2; i<=n; i++){
+//         nextterm = n1 + n2;
+//         n1 = n2;
+//         n2 = nextterm;
+//     }
+//     return nextterm;
+// }
+// let check = fib(4);
+// console.log(check);
+// ---------------------------------
+
+// ---------------sort number-------
+let check = function(list1,list2){
+    let res = [];
+    while(i<list1 && j<list2){
+        if(list1[i]<list2[j]){
+            res.push(list1[i]);
+            i++
+        }else{
+            res.push(list2[j]);
+            j++
+        }
+    }
+    while(i<list1){
+        res.push()
+    }
+}

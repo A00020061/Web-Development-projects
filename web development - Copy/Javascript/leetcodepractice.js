@@ -62,23 +62,23 @@
 // ---------------------------------
 // happy Number
 // ---------------------------------
-var hapnum = function (n, counter = 0) {
-    result = false;
-    if (counter < 8) {
-        let num = n.toString().split('').map(x => Math.pow(x, 2));
-        let numaddition = num.reduce((a, b) => a + b, 0);
-        if (numaddition=== 1) {
-            return result = true
-        } else {
-            counter++
-            hapnum(numaddition, counter)
-        }
-    }
-    return result;
+// var hapnum = function (n, counter = 0) {
+//     result = false;
+//     if (counter < 8) {
+//         let num = n.toString().split('').map(x => Math.pow(x, 2));
+//         let numaddition = num.reduce((a, b) => a + b, 0);
+//         if (numaddition=== 1) {
+//             return result = true
+//         } else {
+//             counter++
+//             hapnum(numaddition, counter)
+//         }
+//     }
+//     return result;
 
-}
-let mark = hapnum(2);
-console.log(mark);
+// }
+// let mark = hapnum(2);
+// console.log(mark);
 
 
 // let a= 25;
@@ -101,4 +101,48 @@ console.log(mark);
 
 // let numornot = n=>isNaN(n)? 0: n
 // console.log(['hi',1,2,3,4,'sandy'].reduce((a,b)=>numornot(a)+numornot(b),0));
+
+// -----------------------------------
+// Check if One String Swap Can Make Strings Equal
+// --------------------------------------
+
+// var check = function(s1,s2){
+//     result = false
+//     if(s1.length===s2.length){
+//         if(s1[0]===s2[s2.length-1] && s1[s1.length-1]===s2[0]){
+//             return result = true;
+//         }else if(s1===s2){
+//             return result = true;
+//         }
+//     }
+//     return result;
+// }
+// let bb = check('bank', 'bankk');
+// console.log(bb);
+// ----------------------------------
+// Check if One String Swap Can Make Strings Equal-end
+// -----------------------------------------------
+
+// function reversest(str){
+//     return str.split('').reverse().join('');
+// }
+// let aa = reversest('hello')
+// console.log(aa);
+// let aa = function(str){
+//     let bb = '';
+//     for(let i=str.length-1; i>=0; i--){
+//         bb += str[i]
+//     }return bb;
+// }
+// let cc = aa('hello');
+// let dd = typeof(cc);
+// console.log(dd );
+
+let a = 'hello';
+let b = 'hisar';
+if(b.includes('j')){
+    console.log('what we can do');
+}else{
+    'what you do'
+}
 
