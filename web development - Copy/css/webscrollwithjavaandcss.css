@@ -70,15 +70,16 @@ image{
 }
 .unordered_list li{
     list-style: none;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     padding: .7rem .2rem;
+    cursor: pointer;
 }
 .unordered_list li a{
     text-decoration: none;
     color: white;
     font-size: 1.8rem;
     text-transform: uppercase;
-    cursor: pointer;
+    /* border: 1px solid blue; */
   
 }
 .unordered_list li a:hover{
@@ -95,6 +96,7 @@ image{
     color: white;
     font-size: 2.5rem;
     cursor: pointer;
+    /* border: 1px solid white; */
 }
 
 /* ---------------------------navbar_content with hover effect----------------
@@ -111,7 +113,7 @@ image{
     height: auto;
     min-height: 100vh;
     display: flex;
-    justify-content: top;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
 }
@@ -166,7 +168,7 @@ image{
 @media only screen and (max-width:400px){
     .brand_name{
         display: block;
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         width: 100%;
         margin-bottom: 1rem;
         padding: .5rem;
@@ -216,7 +218,7 @@ image{
    min-height: 100vh;
    height: auto;
    display: block;
-   border: 2px solid blue;
+   /* border: 5px solid blue; */
    padding-bottom: 0px;
 }
 main{
@@ -237,7 +239,7 @@ main{
 /* ------------main_heading-----------
 ----------------------------------- */
 .main_content_section{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-size: 2rem;
     padding: 3rem 0 1rem 1rem;
     text-align: center;
@@ -245,7 +247,7 @@ main{
 }
 .section1{
     grid-area: section1;
-    padding-top: 6rem;
+    padding-top: 3rem;
     box-shadow: .5px .5px 6px 1px #95a5a6;
 }
 .main_heading{
@@ -277,11 +279,15 @@ main{
 .main_heading_para{
     font-size: 2rem;
 }
+.section3{
+    grid-area: section3;
+    box-shadow: .5px .5px 6px 1px #95a5a6;
+}
 .section2{
     grid-area: section2; 
     box-shadow: .5px .5px 6px 1px #95a5a6;
 }
-.section3{
+.section4{
     grid-area: section3;
     background-image: url(https://southaustralia.com/media/a4xgrap0/alittlemore_pinklakes_heroimagery_1920x800-crop2.jpg?anchor=center&mode=crop&quality=80&width=1920&height=600&rnd=132768542037730000);
     background-size: cover;
@@ -420,7 +426,8 @@ image{
     color: white;
     text-decoration: none;
     /* border: 1px solid white; */
-    box-shadow: 0px 0px 1px .5px #95a5a6;
+    box-shadow: 0px 0px 1px 1px #95a5a6;
+    backdrop-filter: blur(.5px);
 }
 .btn_btn_btn:hover{
     background-color: white;
@@ -491,27 +498,8 @@ image{
     color: white;
     box-shadow: 0px 0px 1px .5px #95a5a6;
 }
-/* ------------------btn-backward-forward-------
----------------------------------------------- */
-.btn_back_btn{
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-}
-.btn_forward_btn{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    display: inline-block;
-}
-.btn_backward{
-    font-size: 4rem;
-    
-}
-.btn_forward{
-    font-size: 4rem;
-    float: right;
-}
+
+
 /* ------------footer_start--------- */
 footer{
     
@@ -524,7 +512,7 @@ footer{
     min-height: 35rem;
     overflow-y: visible;
     position: relative;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
 }
 .footer_area{
     /* border: 2px solid blue; */
@@ -560,7 +548,7 @@ footer{
     display: flex;
     align-items: center;
     margin: 0px -0.5555rem 0px -0.555rem;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     width: 25%;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -734,3 +722,170 @@ span{
 
 
 /* -----------------footer-end------------ */ 
+/* ------------------------------------------------
+                  MEDIA QUERIES-START
+------------------------------------------------- */
+@media screen and (max-width: 992px) {
+    .unordered_list li a{
+        font-size: 1.55rem;
+        padding: 1rem;
+    }
+    .navbar .unordered_list{
+        gap: 2rem;
+        margin-right: 1rem;
+    }
+    #logo{
+        font-size: 2rem; 
+    }
+    .video_content{
+        width: 60%;
+        top: 35%;
+    }
+    .video_heading{
+        font-size: 4.7rem;
+    }
+    .video_para{
+        font-size: 2.1rem;
+    }
+    #btn_adelaide{
+        padding: 1.2rem;
+    }
+    #btn_adelaide a{
+        font-size: 1.5rem;
+    }
+    .main_center_part .main_content_section .first,
+    .main_center_part .main_content_section .second{
+        padding-bottom: 2rem;
+    }
+    .main_heading{
+        font-size: 2.3rem;
+    }
+    .main_heading_para .paragraph{
+        padding: 0px 1rem 2rem 2rem;
+        line-height: 2rem;
+    }
+    .btn_little_more_explore{
+        padding: 1rem;  
+        bottom: 2%;
+    }
+    .btn_little_more_explore a{
+        font-size: 1.2rem;
+    }
+    .main_travel_destination .main_section_heading .main_travel_idea strong{
+        font-size: 3.3rem;
+    }
+    .content_image_section .coast_destination .route{
+        font-size: 1.6rem;
+        border: 1px solid white;   
+        width: 75%; 
+        padding: .3rem .5rem;
+    }
+    .btn_btn_btn{
+        font-size: 1.4rem;
+    }
+    .image_overlap_content{
+        top: 65%;
+        min-height: 60%;
+
+    }
+    .add_image_section .image_overlap_content .first_score{
+        font-size: 2.55rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .image_overlap_content .first_para_score{
+        font-size: 1.8rem;
+    }
+    footer{
+        min-height: 90vh;
+    }
+    .footer_header, .footer_header>*{
+        border: 1px solid white;
+    }
+    .footer_header{
+        flex-direction: column;
+    }
+    .footer_logos{
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+    .footer_nav{
+        width: 100%;
+    }
+    .footer_social{
+        width: 50%;
+        justify-content: center;
+    }
+    .footer_footer{
+        flex-direction: column;
+        order: 1;
+    }
+
+}
+@media screen and (min-width: 1300px){
+    /* --------------navbar----------- */
+    .unordered_list li a{
+       font-size: 2.2rem;
+       padding: 1rem;
+    }
+    .brand_name{
+        margin-left: 3.5rem;
+    }
+    .navbar .unordered_list{
+        gap: 7rem;
+    }
+    .navbar .unordered_list li{
+        box-shadow: 0 0 4px 1px #ecf0f1;
+    }
+    #logo{
+        font-size: 3.2rem;
+    }
+    /* --------------------navbar----------- */
+
+    /* -----------------video-content----------- */
+    .video_heading{
+        font-size: 8rem;
+    }
+    .video_para{
+        font-size: 3rem;
+    }
+    #btn_adelaide{
+        margin-top: 5rem;
+    }
+    /* -------------------------------- */
+
+    /* ------------main content part------- */
+    main{
+        grid-template-areas: 'section1 section2 section4'
+        'section1 section2 section4';
+        border: 1px solid blue;
+        min-height: 75vh;
+        width: 70%;
+    }
+    .main_content_section{
+        border: 1px solid yellow;
+    }
+   
+    .main_center_part, .responsive_div{
+        border: 1px solid black;
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------
+                  MEDIA QUERIES-END
+------------------------------------------------- */
