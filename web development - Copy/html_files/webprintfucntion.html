@@ -55,6 +55,28 @@
             width: 60%;
             margin: auto;
         }
+        .container_container,.container_2{
+            border: 1px solid black;
+            padding: 1rem;
+        }
+        .hide_div{
+            border: 1px solid black;
+            display: none;
+            padding: 1rem;
+            width: 18%;
+            margin: 0 auto;
+        }
+        .btn_close{
+            display: block;
+            margin: 0 auto;
+        }
+        .hide_div::backdrop{
+            background-image: url(https://images.unsplash.com/photo-1648737119359-510d4f551382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+            opacity: .5;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -139,33 +161,81 @@
 
 
     </div>
-
     <button id="whole_page" onclick="printPage()">Print Page</button>
+
+    <div class="container_container">
+        <div class="container_2">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eum debitis et, veniam tempora
+                minus totam ex ad, sed porro impedit eaque esse quis, eveniet obcaecati? Esse, aliquid repellat.
+                Corrupti sed quidem quas unde sapiente eum quos exercitationem illum quo? Minus ad nobis eum ipsum in.
+                Unde quas soluta quasi atque itaque? Dicta numquam error esse. Pariatur ea inventore asperiores commodi!
+                Adipisci ipsa harum eum non a eveniet fuga corrupti molestias voluptate ratione dolore molestiae magnam,
+                earum officiis et reprehenderit, perferendis doloremque commodi beatae quia aspernatur repellendus
+                distinctio recusandae. Sed soluta quaerat laboriosam odio eveniet necessitatibus aperiam deserunt autem!
+                Magnam molestias totam, pariatur minus quaerat quibusdam quo. At eius voluptas quia laudantium, nisi
+                officiis! Nihil numquam vero illum! Illo commodi ab officiis excepturi earum, rem voluptate quasi quod
+                ipsa dignissimos. Debitis aspernatur qui soluta suscipit ab, eos repudiandae consequuntur! Quas
+                quibusdam vero dolorum, qui nobis delectus ratione consequuntur? Porro tempore et natus perferendis
+                perspiciatis facere, sapiente dolorum asperiores, nesciunt vel commodi atque ducimus recusandae odit
+                eius, consectetur tempora repellendus quaerat molestias! Odit quam quaerat dolorum quae numquam
+                assumenda aspernatur quo expedita, autem facilis perspiciatis, aut tempore enim culpa voluptate libero
+                est officiis asperiores vel illo voluptatem! Voluptates praesentium consequatur fuga!</p>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur placeat, laudantium
+                distinctio, rem repudiandae nisi ex inventore delectus, eligendi amet hic soluta aut. Cupiditate maxime,
+                accusamus natus dolore aspernatur architecto. Quasi voluptate natus aliquam asperiores in sapiente
+                fugiat facilis voluptatum ea, illo exercitationem libero cupiditate laborum? Culpa, ipsam. Sequi debitis
+                distinctio quasi esse voluptate necessitatibus labore quia, cum, eius nihil deleniti ad voluptatibus
+                consectetur nostrum a veniam aliquam. Eum ducimus quas sequi incidunt pariatur labore nam aperiam natus
+                hic, eligendi molestiae quibusdam itaque sunt debitis, totam repellendus accusantium! Nostrum quisquam
+                architecto, impedit dolores quae debitis? Cumque neque iste sed animi totam explicabo expedita,
+                veritatis earum vero obcaecati illum omnis ipsam nesciunt, modi officia minus corporis repellat, atque
+                consectetur odit eveniet doloribus. Nulla commodi molestias, quas expedita alias excepturi aliquam est
+                quod, repellendus non laborum, voluptas beatae distinctio perferendis eos sunt nesciunt. Porro fugit
+                voluptas nesciunt, consequuntur expedita vero magnam dolorum? Enim exercitationem cumque autem porro
+                eligendi qui cum soluta repellat unde! Consectetur ex omnis quia officiis! Illum nisi iusto, iste et
+                harum rerum aut quas ab expedita labore unde, dolor quisquam aliquam culpa, facere laudantium nobis
+                aperiam fuga perferendis repellendus. Praesentium ullam nostrum nisi excepturi deleniti consectetur
+                sapiente odio nobis.</p>
+        </div>
+        <dialog class="hide_div">
+            <p class="hide_para">Hello Sandeep, How are you?</p>
+            <button class="btn_close" type="submit">Hide Me</button>
+        </dialog>
+    </div>
+    <button class="btn_btn_2" type="submit"">Explore Me</button>
+
     <script>
-        function searchMe(){
+        const btn_btn_2 = document.querySelector('.btn_btn_2');
+        const container_2 = document.querySelector('.container_2');
+        const hide_div = document.querySelector('.hide_div');
+        const  btn_close = document.querySelector('.btn_close');
+        btn_btn_2.addEventListener('click', function(){
+            hide_div.showModal();
+
+        });
+        btn_close.addEventListener('click',function(){
+            hide_div.close();  
+        });
+
+
+
+
+
+
+        function searchMe() {
             let filter = document.getElementById('input').value.toUpperCase();
             let mytable = document.getElementById('table_data');
             let mytablerow = mytable.getElementsByTagName('tr');
-            for(let i=0; i<mytablerow.length; i++){
+            for (let i = 0; i < mytablerow.length; i++) {
                 let tabledata = mytablerow[i].getElementsByTagName('td')[0];
                 let tableContent = tabledata.textContent;
-                if(tableContent.toUpperCase().indexOf(filter)>-1){
+                if (tableContent.toUpperCase().indexOf(filter) > -1) {
                     tableContent[i].style.display = '';
-                }else{
+                } else {
                     tableContent[i].style.display = 'none';
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
         function printPage() {
             var whole_page = document.getElementById('whole_page');
             whole_page.style.visibility = 'hidden';
@@ -178,7 +248,6 @@
             window.print();
             document.body.innerHTML = page_backup;
         }
-
     </script>
 </body>
 

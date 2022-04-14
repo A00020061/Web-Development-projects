@@ -16,18 +16,26 @@
             letter-spacing: 2px;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         #btn {
             padding: 1rem;
             background-color: green;
             color: white;
             cursor: pointer;
         }
-        .printline{
+
+        .printline {
             border: 2px solid black;
             font-size: 1.2rem;
             padding: 1rem;
         }
-        .btnbtn{
+
+        .btnbtn {
             padding: 1rem;
             font-size: 1rem;
             box-sizing: border-box;
@@ -37,6 +45,148 @@
             background-color: blueviolet;
             border: none;
         }
+
+        .lower_part {
+            /* border: 1px solid black; */
+            background-color: rgb(142, 68, 173, .5);
+        }
+
+        .main_part {
+            width: 75%;
+            margin-inline: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            text-align: center;
+            align-items: center;
+            /* border: 1px solid black; */
+            padding: 1rem;
+        }
+
+        .main_number_area {
+            /* border: 1px solid blue; */
+
+        }
+
+        .check_num {
+            padding: 1rem;
+        }
+
+        .main_number_area h1 {
+            /* border: 1px solid blue; */
+            color: white;
+            font-size: 2rem;
+            padding: 0rem 1rem;
+        }
+
+        .main_number_area p {
+            /* border: 1px solid green; */
+            color: white;
+            padding: .5rem 1rem;
+            letter-spacing: .2px;
+            text-transform: uppercase;
+        }
+        .image_overlay{
+            /* border: 2px solid blue; */
+            width: 500px;
+            height: 400px;
+            margin-top: 250px;
+            margin-inline: auto;
+            margin-bottom: 200px;
+            transition: 0.3s;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0px 0px 4px 2px #95a5a6;
+            background: linear-gradient(to right, #8e44ad,#34495e,#1abc9c);
+        }
+        .image_overlay:hover{
+            height: 450px;
+        }
+        .image_section{
+            /* border: 2px solid yellow; */
+            width: 80%;
+            height: 100%;
+            margin-inline: auto;
+            position: relative;
+            z-index: 99;
+            /* box-shadow: 0px 0px 4px 2px #95a5a6; */
+        }
+        .image_section img{
+            width: 100%;
+            margin-inline: auto;
+            border-radius: 10px;
+            transform: translateY(-80px);
+        }
+        .image_content{
+            /* border: 1px solid black; */
+            text-align: center;
+            transform: translateY(-600px);
+            padding: 1rem 2rem;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .image_overlay:hover > .image_content{
+            transform: translateY(-200px);
+            opacity: .8;
+        }
+        /* -----------------zoom out image overlay effect-------- */
+        .score{
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            /* height: 500px; */
+            flex-wrap: wrap;
+            transition: 0.3s;
+        }
+        .check_score{
+            border: 1px solid black;
+            margin: 1.2rem 0;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            height: 100%;
+            z-index: 1;
+            /* transition: 0.3s; */
+        }
+        .check_score img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: 0.4s;
+            aspect-ratio: 16/9;
+            position: relative;
+
+        }
+        .check_score img:hover{
+            transform: scale(1.2);
+        }
+        .second_chance{
+            border: 1px solid blue;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            position: absolute;
+            color: white;
+            /* opacity: 1; */
+            width: 100%;
+        }
+        .sandy{
+            position: absolute;
+            width: 50%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            border: 1px solid white;
+            margin-right: 5rem;
+        }
+        /* .check_score img:hover > .second_chance{
+            opacity: 1;
+            transform: translateY(-100px);
+        } */
+        /* ----------------------------------- */
     </style>
 </head>
 
@@ -76,8 +226,113 @@
             obcaecati minus!</p>
     </div>
     <button class="btnbtn" onclick="printME('printline')">Printer</button>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.34690085362!2d138.60035011628366!3d-34.92283588196187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0ced4221b6bfd%3A0xf123eb7ac3a4f089!2sRundle%20Mall%2C%20Adelaide%20SA%205000!5e0!3m2!1sen!2sau!4v1649837587155!5m2!1sen!2sau"
+        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <div class="lower_part">
+        <div class="main_part">
+            <section class="main_number_area">
+                <div class="check_num">
+                    <h1 class="figure" data-number="2000">0</h1>
+                    <p>project completed</p>
+                </div>
+            </section>
+            <section class="main_number_area">
+                <div class="check_num">
+                    <h1 class="figure" data-number="6000">0</h1>
+                    <p>happy clients</p>
+                </div>
+            </section>
+            <section class="main_number_area">
+                <div class="check_num">
+                    <h1 class="figure" data-number="5000">0</h1>
+                    <p>cups of coffee</p>
+                </div>
+            </section>
+            <section class="main_number_area">
+                <div class="check_num">
+                    <h1 class="figure" data-number="3000">0</h1>
+                    <p>real professional</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="image_overlay">
+        <div class="image_section">
+            <div class="real">
+
+                <img src="https://images.unsplash.com/photo-1629349855726-dc8700ccb796?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+        </div>
+        <div class="image_content">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Quisquam dolorem ex accusantium, in quo at vitae perspiciatis 
+                beatae tempore magni aliquam sit </p>
+        </div>
+    </div>
+    <div class="score">
+        <div class="check_score">
+            <div class="real">
+                
+                <img src="https://images.unsplash.com/photo-1504297050568-910d24c426d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2MHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="second_chance">
+                <div class="sandy">
+
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
+                         commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
+                          quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="check_score">
+            <div class="real">
+
+                <img src="https://images.unsplash.com/photo-1649794508359-4a12023aed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="second_chance">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
+                     commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
+                      quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
+            </div>
+        </div>
+        <div class="check_score">
+            <img src="https://images.unsplash.com/photo-1649805795672-b948bbdfdae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            <div class="second_chance">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
+                     commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
+                      quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
+            </div>
+        </div>
+    </div>
     <script>
+        // -------------------------figure increment-----------
+        const currh1 = document.querySelectorAll('.figure');
+        const speed = 200;
+        currh1.forEach((currEle)=>{
+            const updatenumber = ()=>{
+                const targetNumber = parseInt(currEle.dataset.number);
+                // console.log(targetNumber);
+                const initialNumber = parseInt(currEle.innerText);
+                // console.log(initialNumber)
+                const incrementNumber = Math.trunc(targetNumber/speed);
+                // console.log(incrementNumber);
+                if(initialNumber<targetNumber){
+                    currEle.innerText = `${initialNumber + incrementNumber}+`;
+                    setTimeout(updatenumber,)
+                }
+            }
+            updatenumber();
+        })
+        // ----------------figrure increm,
         
+
     //     function searchCafe() {
     //         let input = document.getElementById('search_bar').value.toUpperCase();
     //         let check = document.getElementById('what');
