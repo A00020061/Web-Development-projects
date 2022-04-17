@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main_color: #95a5a6;
+    --secondary_color: #2c3e50;
+}
+body,html{
+    min-height: 100vh;
+    width: 100%;
+}
+main{
+    /* border: 1px solid black; */
+    margin-top: 2rem;
+}
+.navigation_bar{
+    /* border: 1px solid blue; */
+    width: 80%;
+    text-align: center;
+    margin-inline: auto;
+    align-items: center;
+}
+.navigation_icon{
+    /* border: 2px solid green; */
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--main_color);
+    transition: .3s;
+    background-image: url(https://images.unsplash.com/photo-1520262389826-d559a9aca921?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon_link{
+    text-decoration: none;
+    color: var(--secondary_color);
+    font-size: 1.8rem;
+    color: white;
+    transition: .3s;
+    /* padding: 1rem; */
+    /* border: 1px solid black; */
+}
+.icon_link i{
+    /* border: 1px solid black; */
+    padding: 1rem;
+    transition: .3s;
+}
+.navigation_content{
+    /* opacity: 0; */
+}
+
+.navigation_content p{
+    border: 1px solid black;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    color: #2c3e50;
+    transition: .3s;
+    opacity: 0;
+}
+.icon_link i:hover{
+    transform: translateY(-10px);
+    color:#8e44ad;
+    box-shadow: 0px 0px 5px 3px #3498db;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+.image_section{
+    width: 80%;
+    /* border: 1px solid black; */
+    height: 70vh;
+    margin-top: 5rem;
+    position: relative;
+    background-image: url(https://media.istockphoto.com/photos/hong-kong-cityscape-and-dramatic-sky-picture-id1343583875?b=1&k=20&m=1343583875&s=170667a&w=0&h=nJeV_WL7AxJ2WyHECHV5K2oKW4N-RR7DI9JxfgvUoKk=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    transition: .4s ease;
+    margin-inline: auto;
+}
+.image_section:hover{
+    transform: scale(1.1);
+}
+section{
+    /* border: 1px solid blue; */
+    width: 80%;
+    padding: 2rem 4rem;
+    margin-inline: auto;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.images{
+    /* border: 3px solid green; */
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.images p{
+    font-size: 4rem;
+    opacity: .4;
+    color: #ecf0f1;
+    opacity: 0;
+}
+.image_section:hover .images {
+    opacity: 1;
+}
