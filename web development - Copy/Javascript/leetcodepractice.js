@@ -137,12 +137,60 @@
 // let cc = aa('hello');
 // let dd = typeof(cc);
 // console.log(dd );
+// ---------------------------------
 
-let a = 'hello';
-let b = 'hisar';
-if(b.includes('j')){
-    console.log('what we can do');
-}else{
-    'what you do'
+// let curr = new ListNode();
+// let dummy  = curr;
+// while (list1 && list2){
+//     if(list1.val<list2.val){
+//         curr.next = list1;
+//         list1 = list1.next;
+//     }else{
+//         curr.next = list2;
+//         list2 = list2.next;
+//     }
+//     curr = curr.next
+// }
+// if(list1){
+//     curr.next = list1;
+// }
+// if(list2){
+//     curr.next = list2;
+// }
+// return dummy.next;
+// };
+// ----------------------------------
+// class Node{
+//     constructor(){
+//         this.head = null;
+//         this.tail = null;
+//         this.length= 0;
+//     }
+//     insert(value){
+//         this.length++;
+//         let newnode = new Node(value)
+//     }
+// }
+// let newnode =new Node(['hello']);
+// console.log(newnode);
+// -------------------------------
+
+class Node{
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
 }
+class Linkedlist{
+    constructor(){
+        this.head = null;
+        this.size = 0;
+    }
+    insertFirst(value){
+        this.head = new Node(value,this.head)
+    }
+}
+let li = new Linkedlist();
+li.insertFirst(112);
+console.log(li);
 

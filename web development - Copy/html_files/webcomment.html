@@ -187,6 +187,7 @@
             transform: translateY(-100px);
         } */
         /* ----------------------------------- */
+      
     </style>
 </head>
 
@@ -273,45 +274,24 @@
                 beatae tempore magni aliquam sit </p>
         </div>
     </div>
-    <div class="score">
-        <div class="check_score">
-            <div class="real">
-                
-                <img src="https://images.unsplash.com/photo-1504297050568-910d24c426d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2MHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="second_chance">
-                <div class="sandy">
+    <div class="count_down">
+        <div class="holder">
+            <p class="demo"></p>
 
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
-                         commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
-                          quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
-                </div>
-            </div>
-        </div>
-        <div class="check_score">
-            <div class="real">
-
-                <img src="https://images.unsplash.com/photo-1649794508359-4a12023aed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="second_chance">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
-                     commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
-                      quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
-            </div>
-        </div>
-        <div class="check_score">
-            <img src="https://images.unsplash.com/photo-1649805795672-b948bbdfdae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-            <div class="second_chance">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis amet,
-                     commodi magni eius consequuntur minus corrupti iste cupiditate reprehenderit
-                      quam obcaecati inventore aspernatur omnis repellendus velit deleniti animi. Natus, aliquam.</p>
-            </div>
         </div>
     </div>
     <script>
+        // let count = 0;
+        // let minute = 0;
+        // setInterval(() => {
+        //     count++
+        //     if(count===59){
+        //         minute +=1;
+        //         count = 0;
+        //     }
+        //     let demo = document.querySelector('.demo').innerHTML = `${minute}:${count}`;
+            
+        // }, 1000);
         // -------------------------figure increment-----------
         const currh1 = document.querySelectorAll('.figure');
         const speed = 200;
@@ -330,6 +310,12 @@
             }
             updatenumber();
         })
+function updatetime(){
+    let currtime = new Date();
+    let updatecurr = currtime.toLocaleTimeString();
+    document.querySelector('.demo').innerHTML = updatecurr;
+}
+setInterval(updatetime,1000)
         // ----------------figrure increm,
         
 

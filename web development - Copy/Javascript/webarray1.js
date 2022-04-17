@@ -126,18 +126,41 @@
 // ---------------------------------
 
 // ---------------sort number-------
-let check = function(list1,list2){
-    let res = [];
-    while(i<list1 && j<list2){
-        if(list1[i]<list2[j]){
-            res.push(list1[i]);
-            i++
-        }else{
-            res.push(list2[j]);
-            j++
-        }
+// let check = function(list1,list2){
+//     let res = [];
+//     while(i<list1 && j<list2){
+//         if(list1[i]<list2[j]){
+//             res.push(list1[i]);
+//             i++
+//         }else{
+//             res.push(list2[j]);
+//             j++
+//         }
+//     }
+//     while(i<list1){
+//         res.push()
+//     }
+//     return prenode;
+// }
+// let check = reverseme([1,2,3,4,5,6]);
+// console.log(check);
+// ----------------------------------
+// ----------------add two number linked list---------
+
+var addtwonumber = function(list1,list2){
+    let prenode = new ListNode(-1);
+    prenode.next = head;
+    let curr = head;
+    let pre = prenode;
+    while(curr){
+        let temp = curr.next;
+        curr.next = pre;
+        pre = curr;
+        curr = temp;
     }
-    while(i<list1){
-        res.push()
-    }
+    return pre;
 }
+let checkme = addtwonumber([1,2,3,4,5,6],[7,8,9,4,5,6]);
+console.log(checkme);
+
+// ------------------------------------
