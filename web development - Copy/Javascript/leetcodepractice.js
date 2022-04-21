@@ -174,11 +174,10 @@
 // let newnode =new Node(['hello']);
 // console.log(newnode);
 // -------------------------------
-
 class Node{
-    constructor(value){
+    constructor(value,next=null){
         this.value = value;
-        this.next = null;
+        this.next = next
     }
 }
 class Linkedlist{
@@ -187,10 +186,38 @@ class Linkedlist{
         this.size = 0;
     }
     insertFirst(value){
-        this.head = new Node(value,this.head)
+        this.head = new Node(value, this.head)
+        this.size++
+    }
+    insertLast(value){
+        let node = new Node(value);
+        let curr;
+        if(!this.head){
+            this.head=node;
+        }else{
+            curr = this.head;
+            while(curr.next){
+                curr = curr.next;
+
+            }
+            curr.next = node
+        }
+        this.size++
+        
+    }
+    printList(){
+        let curr = this.head;
+        while(curr){
+            console.log(curr.value);
+            curr = curr.next;
+        }
     }
 }
-let li = new Linkedlist();
+const li = new Linkedlist();
 li.insertFirst(112);
-console.log(li);
+li.insertFirst(113)
+li.insertFirst(114);
+li.insertLast(111)
+li.printList()
+
 

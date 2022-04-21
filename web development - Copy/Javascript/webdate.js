@@ -14,11 +14,3 @@
 // let checkres=(checkfirst.getTime - checklast.getTime);
 // console.log(checkres);
 
-let datetime = new Date();
-let bb = datetime.getHours();
-let cc = datetime.getMinutes();
-let dd = datetime.getSeconds();
-// console.log(`${bb}:${cc}:${dd}`);
-setInterval(() => {
-    return `${bb}:${cc}:${dd}`
-}, 1000);
