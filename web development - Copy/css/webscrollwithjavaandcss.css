@@ -70,7 +70,7 @@ image{
 }
 .unordered_list li{
     list-style: none;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: .7rem .2rem;
     cursor: pointer;
 }
@@ -87,7 +87,7 @@ image{
 }
 .brand_name{
     margin-left: 2rem;
-    border: 1px solid #8e44ad;
+    /* border: 1px solid #8e44ad; */
     padding: 1rem;
     box-shadow: 0 0 1px 3px #22a6b3;
     border-radius: 10% 50%;
@@ -310,7 +310,7 @@ main{
 /* --------------------main_travel_destination-----------
 ------------------------------------------------------ */
 .main_travel_destination{
-    border: 3px solid black;
+    /* border: 3px solid black; */
     text-align: center;
     position: relative;
     display: block;
@@ -512,7 +512,7 @@ footer{
     min-height: 35rem;
     overflow-y: visible;
     position: relative;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 .footer_area{
     /* border: 2px solid blue; */
@@ -548,7 +548,7 @@ footer{
     display: flex;
     align-items: center;
     margin: 0px -0.5555rem 0px -0.555rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 25%;
     flex-wrap: wrap;
     justify-content: flex-start;
