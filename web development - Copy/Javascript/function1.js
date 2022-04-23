@@ -374,31 +374,31 @@
 // console.log(res);
 // console.log(check.prototype)
 
-var library = [ 
-    {
-        title: 'Bill Gates',
-        author: 'The Road Ahead',
-        readingStatus: true
-    },
-    {
-        title: 'Steve Jobs',
-        author: 'Walter Isaacson',
-        readingStatus: true
-    },
-    {
-        title: 'Mockingjay: The Final Book of The Hunger Games',
-        author: 'Suzanne Collins',
-        readingStatus: false
-    }];
-    // let res = library.filter((what) => what.title ==='Steve Jobs');
-    // console.log(typeof(res));
-    for (let i=0; i<library.length; i++){
-        let book = library[i].title + ' ' + ' written by ' + library[i].author;
-        if(library[i].readingStatus){
-            console.log('Already read ' + book);
-        }else{
-        console.log('Pending reading ' + book)};
-    }
+// var library = [ 
+//     {
+//         title: 'Bill Gates',
+//         author: 'The Road Ahead',
+//         readingStatus: true
+//     },
+//     {
+//         title: 'Steve Jobs',
+//         author: 'Walter Isaacson',
+//         readingStatus: true
+//     },
+//     {
+//         title: 'Mockingjay: The Final Book of The Hunger Games',
+//         author: 'Suzanne Collins',
+//         readingStatus: false
+//     }];
+//     // let res = library.filter((what) => what.title ==='Steve Jobs');
+//     // console.log(typeof(res));
+//     for (let i=0; i<library.length; i++){
+//         let book = library[i].title + ' ' + ' written by ' + library[i].author;
+//         if(library[i].readingStatus){
+//             console.log('Already read ' + book);
+//         }else{
+//         console.log('Pending reading ' + book)};
+//     }
 // var SandeepKumar = {
 //     firstName: 'Sandeep',
 //     lastName: 'Kumar',
@@ -485,14 +485,118 @@ var library = [
 // console.log(student.getname);
 // console.log(student.firstName);
 
-function University() {
-    this.Name ='Torrens',
-    this.location =  'Adelaide',
-    this.level = 'first',
-    this.courses = 'complete'
-};
-University.prototype.students = '2500';
-const university = new University;
-console.log(university);
-console.log(university.students)
-console.log(University.prototype);
+// function University() {
+//     this.Name ='Torrens',
+//     this.location =  'Adelaide',
+//     this.level = 'first',
+//     this.courses = 'complete'
+// };
+// University.prototype.students = '2500';
+// const university = new University;
+// console.log(university);
+// console.log(university.students)
+// console.log(University.prototype);
+class Node {
+    constructor(value, next = null) {
+        this.value = value;
+        this.next = next;
+    }
+}
+class linkedlist {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+
+    insertfirst(value) {
+        this.head = new Node(value, this.head);
+        this.size++
+    }
+    inserend(value) {
+        let node = new Node(value);
+        let curr;
+        if (!this.head) {
+            this.head = node;
+        } else {
+            curr = this.head;
+            while (curr.next) {
+                curr = curr.next
+            }
+            curr.next = node
+        }
+        this.size++
+    }
+    insertindex(value, index) {
+        if (index > 0 && index > this.size) {
+            return;
+        }
+        if (index === 0) {
+            return this.insertfirst(value);
+        }
+        let node = new Node(value);
+        let curr = this.head;
+        let pre;
+        let count = 0;
+        while(count<index){
+            pre = curr;
+            count++
+            curr = curr.next;
+        }
+        pre.next = node;
+        node.next = curr;
+        this.size++
+    }
+    getindexvalue(index){
+        let curr = this.head;
+        let count = 0;
+        while(curr){
+            if(count==index){
+                console.log(curr.value)
+            }
+            count++
+            curr = curr.next
+        }
+        return null;
+
+    }
+    removeindexvalue(index){
+        let curr = this.head;
+        let pre;
+        let count = 0;
+        if(index===0){
+            this.head = curr.next;
+        }else{
+            while(count<index){
+                pre = curr;
+                count++;
+                curr = curr.next
+            }
+            pre.next = curr.next
+        }
+        this.size--
+        
+    }
+    clearlist(){
+        this.head = null;
+        this.size=0;
+    }
+    printlist() {
+        let curr = this.head;
+        while (curr) {
+            console.log(curr.value);
+            curr = curr.next;
+        }
+    }
+}
+const li = new linkedlist();
+li.insertfirst(100);
+li.insertfirst(90);
+li.inserend(110)
+li.inserend(120)
+// li.insertindex(105,2)
+// li.insertindex(80,0)
+// li.insertindex(130,8)
+// li.getindexvalue(3)
+// li.removeindexvalue(0)
+li.clearlist()
+li.printlist()
