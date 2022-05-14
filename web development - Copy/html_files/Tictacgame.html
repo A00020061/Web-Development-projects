@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Tictacgame.css">
+    <title>Tic-Tac-game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="table_container">
+            <h1 id="game_heading">TIC TAC TOE</h1>
+            <div class="box">
+                <p class="para">X is next!</p>
+                <button class="reset_btn">Restart</button>
+            </div>
+            <table class="table_box">
+                <tr class="table_row">
+                    <td class="game_box"></td>
+                    <td class="game_box">x</td>
+                    <td class="game_box"></td>
+                </tr>
+                <tr class="table_row">
+                    <td class="game_box">x</td>
+                    <td class="game_box"></td>
+                    <td class="game_box"></td>
+                </tr>
+                <tr class="table_row">
+                    <td class="game_box">x</td>
+                    <td class="game_box">o</td>
+                    <td class="game_box"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+       var game_Cell = document.querySelectorAll('.game_box');
+       var reset_btn = document.querySelector('.reset_btn');
+       const status_report = document.querySelector('.para');
+       var player1 = 'X';
+       var player2 = 'O';
+       let value = 1;
+    //    game variable
+    let gameIsLive = ture;
+    let Xisnext = ture;
+    
+    let lettertosymble = (letter)=>letter==='X' ? player1 : player2;
+    // function lettertosymble(letter){
+    //     if(letter==='X'){
+    //         return player1;
+    //     }else{
+    //         return player2;
+    //     }
+    // }
+    const handlewin = (letter)=>{
+        gameIsLive = false;
+        if(letter==='X'){
+            status_report.innerHTML = `Player 1 has won the game :)`
+        }else{
+            status_report.innerHTML = `Player 2 has won the game :)`
+        }
+    }
+    const checkgamestatus=()=>{
+        const topleft = game_Cell[0].classList[1];
+        const topmiddle = game_Cell[1].classList[1];
+        const topright =  game_Cell[2].classList[1];
+        const middleleft =  game_Cell[3].classList[1];
+        const middlemiddle =  game_Cell[4].classList[1];
+        const middelright =  game_Cell[5].classList[1];
+        const bottomleft =  game_Cell[6].classList[1];
+        const bottommiddle =  game_Cell[7].classList[1];
+        const bottomright =  game_Cell[8].classList[1]
+    }
+
+       function player1_turn(){
+           if(!value){
+               alert('Player 2 turn!')
+           }
+           value = 1;
+           for(let i=0; i<game_Cell.length; i++){
+               game_Cell[i].addEventListener('click', function(){
+                   game_Cell.textContent = 'X';
+               })
+           }
+       }
+       function player2_turn(){
+           if(value){
+               alert('Player 1 turn!')
+               return
+           }
+           value = 0;
+           for(let i=0; i<game_Cell.length; i++){
+               game_Cell[i].addEventListener('click', function(){
+                   game_Cell.textContent = 'O';
+               })
+           }
+       }
+       reset_btn.addEventListener('click', function(){
+           for(let i = 0; i<game_Cell.length; i++){
+               game_Cell[i].textContent = '';
+               value = 1;
+           }
+       })
+      
+
+    </script>
+</body>
+</html>
