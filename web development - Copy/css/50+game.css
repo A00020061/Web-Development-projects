@@ -1,0 +1,66 @@
+.container{
+     border: 1px solid black;
+     width: 800px;
+     height: 500px;
+}
+.game_section{
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.part_one, .part_two{
+    border: 1px solid black;
+    background-image: url(https://images.unsplash.com/photo-1651849309452-24810e47c477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    /* margin-top: 2rem; */
+}
+.part_two{
+    margin-left: .5rem;
+}
+.player1_score, .player2_score{
+    border: 1px solid black;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-items: center;
+    color: rgb(44, 62, 80,.8);
+    text-shadow: 1px 1px 2.5px white;
+    font-size: 4rem;
+}
+.btn{
+    /* border: 3px solid blue; */
+    position: absolute;
+    bottom: 10%;
+    outline: none;
+    border: none;
+    transform: translate(-50%);
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 2px #8e44ad;
+    background-color: rgb(142, 68, 173, .5);
+    color: white;
+}
+.reset_btn{
+    /* border: 1px solid blue; */
+    /* width: 10%; */
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+}

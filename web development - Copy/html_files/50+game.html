@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/web6bspace.css">
+    <title>Game Winner</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game_section">
+            <div class="part_one">
+                <div class="player1_score">0 </div>
+                <button title="player1" class="btn player1_btn" onclick="player1_score">Player 1</button>
+            </div>
+            <div class="part_two">
+                <div class="player2_score">0 </div>
+                <button class="btn player2_btn" onclick="player2_score">Player 2</button>
+            </div>
+        </div>
+        <button class="reset_btn">
+            Reset
+        </button>
+    </div>
+    <script>
+        // random number from 1 to 0
+        const player1_score = document.querySelector('.player1_score');
+        const player2_score = document.querySelector('.player2_score');
+        const btnplayer1 = document.querySelector('.player1_btn');
+        const btnplayer2 = document.querySelector('.player2_btn');
+        const reset_btn = document.querySelector('.reset_btn');
+        // console.log(player1_score, player2_score, btnplayer1, btnplayer2, reset_btn)
+        let targetvalue = 50;
+        let currscoreplayer1 = 0;
+        let currscoreplayer2 = 0;
+        let value = 1;
+        btnplayer1.addEventListener('click', function(){
+            if(!value){
+
+                alert(`Choose wrong player`)
+                return 
+            }
+            value = 0;
+            currscoreplayer1 += Math.floor(Math.random()*10)+1;
+            player1_score.textContent = currscoreplayer1;
+            if(currscoreplayer1>=50){
+                alert(`Player 1 won the game with having ${currscoreplayer1} score`);
+            }
+        })
+        btnplayer2.addEventListener('click', function(){
+            if(value){
+                alert(`Choose wrong player`);
+                return
+
+            }
+            value = 1;
+            currscoreplayer2 += Math.floor(Math.random()*10)+1;
+            player2_score.textContent = currscoreplayer2;
+            if(currscoreplayer2>=50){
+                alert(`player 2  won the game with having ${currscoreplayer2} score`)
+            }
+        })
+        reset_btn.addEventListener('click', function(){
+            alert(`Sure! Your want to reset the game`)
+            currscoreplayer1 = 0;
+            currscoreplayer2 = 0;
+            player1_score.textContent = 0;
+            player2_score.textContent = 0;
+            value = 1;
+        })
+            
+        
+    </script>
+</body>
+</html>
