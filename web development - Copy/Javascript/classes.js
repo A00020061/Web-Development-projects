@@ -345,12 +345,20 @@
 //         }
 //     }
 // }
-let a = function(){
-    let total = 1;
-    for(i=1; i++;){
-        total *= i;
-    }return total;
-}
-console.log(a());
+// let res = function(num){
+//     let a = num.toString().split('');
+//     return a;
+// }
+// let b = res(123);
+// console.log(b[0])
+
+// let res = function(n){
+//     let b = n.toString().split('')
+//     return b.length;
+// }
+// let a = res(56478);
+// console.log(a);
+
+
 
 

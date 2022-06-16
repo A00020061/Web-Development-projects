@@ -205,6 +205,26 @@ class Linkedlist{
         this.size++
         
     }
+    insertatindex(value,index){
+        if(index>0 && index>this.size){
+            return;
+        }
+        if(index===0){
+            return this.insertele(value)
+        }
+        let node = new Node(value);
+        let curr, pre;
+        curr = this.head;
+        let count = 0;
+        while(count<index){
+            pre = curr; //node before index
+            count++
+            curr = curr.next //node after index
+        }
+        node.next = curr;
+        pre.next = node;
+        this.size++
+    }
     printList(){
         let curr = this.head;
         while(curr){
@@ -220,4 +240,17 @@ li.insertFirst(114);
 li.insertLast(111)
 li.printList()
 
-
+let prenode = new ListNode(-1);
+prenode.next = head;
+let curr = head;
+let pre = prenode;
+while(curr){
+    if(curr.val===val){
+        pre.next=curr.next;
+        curr = curr.next;
+    }else{
+        pre = curr;
+        curr = curr.next;
+    }
+}
+return prenode.next;
